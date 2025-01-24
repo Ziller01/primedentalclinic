@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../media/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../css/output.css" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Rubik:wght@300..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <meta name="description" content=" Prime Dental Clinic is the first dental clinic in Aswan accredited by GAHAR. We provide the best dental care services." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://primedentalclinic.net/" />
+    <meta property="og:title" content="Prime Dental Clinic" />
+    <meta property="og:description" content=" Prime Dental Clinic is the first dental clinic in Aswan accredited by GAHAR. We provide the best dental care services." />
+    <meta property="og:image" content="https://primedentalclinic.net/media/logo.jpg" />
+
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Prime Dental Clinic" />
+
+    <meta name="keywords" content="dental clinic, aswan, gahar, egypt, prime dental clinic, teeth, dentist, dental care, health, medical, best dental care" />
+
+    <title>Prime Dental Clinic</title>
+  </head>
+  <body class="fonts-plus-jakarta-sans">
+    <!----------------------------------------- NAVBAR ----------------------------------------->
+    <nav id="navbar" class="w-full min-h-20 z-30 px-5 py-3 sticky0 top-0 bg-white text-blue-600 dark:bg-gray-950 dark:text-gray-950 shadow-b-xl"></nav>
+    <!----------------------------------------- HEADER ----------------------------------------->
+    <header class="w-full pb-20 bg-gradient-to-r from-gray-950 to-blue-950">
+      <div class="h-full w-full container mx-auto px-5 py-32 flex flex-col lg:flex-row justify-between items-start">
+        <!-------------- Description -------------->
+        <div class="w-full lg:w-4/5 pe-20 flex flex-col gap-10">
+          <h1 class="text-2xl lg:text-4xl font-bold text-white">#1 Dental Clinic in Aswan Accredited by General Authority for Healthcare Accreditation and Regulation <a href="https://www.gahar.gov.eg/" target="_blank" class="text-yellow-500">(GAHAR)</a></h1>
+          <p class="w-full max-sm:p-1 lg:text-lg text-white/50">At Prime Dental Clinic, we provide top-notch dental care services that prioritize your smile's health and beauty. Trust us to create a brighter, healthier future for you.</p>
+          <span class="w-full h-px bg-white/30"></span>
+          <!-------------- Counter -------------->
+          <div class="w-full flex justify-around items-center" id="counter">
+            <!-------------- Part 1 -------------->
+            <div class="flex flex-col items-start gap-5">
+              <div class="text-3xl lg:text-5xl font-bold text-white flex justify-center items-center">
+                <h6 id="years" data-target="10">0</h6>
+              </div>
+              <p class="lg:text-lg text-white">Years of Experience</p>
+            </div>
+            <!-------------- Part 2 -------------->
+            <div class="flex flex-col items-start gap-5">
+              <div class="text-3xl lg:text-5xl font-bold text-white flex justify-center items-center">
+                <h6 id="treatments" data-target="5000">0</h6>
+              </div>
+              <p class="lg:text-lg text-white">Successful Treatments</p>
+            </div>
+            <!-------------- Part 3 -------------->
+            <div class="flex flex-col items-start gap-5">
+              <div class="text-3xl lg:text-5xl font-bold text-white flex justify-center items-center">
+                <h6 id="patients" data-target="1000">0</h6>
+              </div>
+              <p class="lg:text-lg text-white">Happy Patients</p>
+            </div>
+          </div>
+          <span class="w-full h-px bg-white/30"></span>
+          <div class="flex justify-start items-center mb-10 gap-5">
+            <a href="#book" class="text-lg bg-blue-600 text-white font-bold flex justify-center items-center gap-3 px-5 py-3 rounded-full hover:bg-blue-800 duration-300"><i class="bi bi-check-lg"></i> Book Now</a>
+          </div>
+        </div>
+        <!-------------- Img -------------->
+        <div class="w-full lg:w-2/5 relative">
+          <div class="shadow-lg w-80 p-3 px-5 absolute top-0 left-0 -translate-x-1/3 -translate-y-1/3 rounded-3xl bg-white flex flex-col justify-start items-start gap-1 animate-move-right-left">
+            <div class="flex justify-center items-center gap-1">
+              <i class="bi bi-star-fill text-blue-600"></i>
+              <i class="bi bi-star-fill text-blue-600"></i>
+              <i class="bi bi-star-fill text-blue-600"></i>
+              <i class="bi bi-star-fill text-blue-600"></i>
+              <i class="bi bi-star-fill text-blue-600"></i>
+            </div>
+            <h1 class="font-bold">Best Services & 5 Stars</h1>
+            <a href="https://maps.app.goo.gl/uyEDqoGWzAqYrnP57" target="_blank" class="text-blue-600">Check our clients reviews <i class="ms-1 bi bi-box-arrow-up-right"></i></a>
+          </div>
+          <style>
+            .animate-move-right-left {
+              animation: move-right-left 2s linear infinite alternate;
+            }
+
+            @keyframes move-right-left {
+              0% {
+                transform: translateX(-50%) translateY(-50%);
+              }
+              100% {
+                transform: translateX(-10%) translateY(-50%);
+              }
+            }
+          </style>
+          <img src="../media/GAHAR_EN.png" class="w-32 lg:w-64 aspect-square absolute bottom-0 right-0 lg:translate-x-1/3 translate-y-1/3 rounded-full" />
+          <img src="../media/logo.jpg" alt="" class="w-full rounded-5xl" />
+        </div>
+      </div>
+    </header>
+    <!----------------------------------------- HEADER 2 ----------------------------------------->
+    <div class="container mx-auto p-5 -translate-y-1/4 lg:-translate-y-1/2">
+      <div class="bg-white flex flex-col lg:flex-row justify-between items-center gap-10 p-10 rounded-5xl shadow-lg">
+        <div class="flex justify-center items-center gap-5">
+          <i class="bi bi-telephone text-3xl text-white before:bg-blue-600 before:p-5 before:rounded-2xl"></i>
+          <div class="flex flex-col justify-center items-start gap-2 text-lg">
+            <p class="font-bold text-black">Need Dental Services?</p>
+            <p class="text-gray-800 text-sm">(+20) 01111-33-8461</p>
+          </div>
+        </div>
+        <div class="w-full lg:w-20 h-px lg:rotate-90 bg-blue-100"></div>
+        <div class="flex justify-center items-center gap-5">
+          <i class="bi bi-clock text-3xl text-white before:bg-blue-600 before:p-5 before:rounded-2xl"></i>
+          <div class="flex flex-col justify-center items-start gap-2 text-lg">
+            <p class="font-bold text-black">Opining Hours</p>
+            <p class="text-gray-800 text-sm">SAT to THU 9:00 AM to 10:00 PM</p>
+          </div>
+        </div>
+        <div class="w-full lg:w-20 h-px lg:rotate-90 bg-blue-100"></div>
+        <div class="flex justify-center items-center">
+          <a href="#book" class="bg-blue-600 text-white font-medium px-5 py-3 rounded-full">Make An Appoinment <i class="bi bi-plus-lg"></i></a>
+        </div>
+      </div>
+    </div>
+    <!----------------------------------------- ABOUT US ----------------------------------------->
+    <section id="about" class="container mx-auto px-5 flex flex-col lg:flex-row justify-center items-center gap-10" data-aos="fade-up">
+      <!-------------- Imgs -------------->
+      <div class="w-full lg:w-1/2 relative order-2 lg:order-1">
+        <img src="../media/au2.jpg" class="w-full rounded-5xl" />
+        <div class="absolute bottom-0 right-0 w-52 rounded-tl-5xl rounded-br-5xl border-t-8 border-l-8 border-white overflow-hidden">
+          <img src="../media/au1.jpg" />
+          <div class="absolute w-full h-full top-0 left-0 p-5 flex flex-col justify-center items-center gap-3 bg-gray-950/50">
+            <p class="text-5xl font-bold text-white">10+</p>
+            <p class="text-lg text-white font-medium text-center">Years experience in dental services</p>
+          </div>
+        </div>
+      </div>
+      <!-------------- Description -------------->
+      <div class="w-full lg:w-1/2 flex flex-col justify-center items-start gap-10 order-1 lg:order-2">
+        <!-------------- Title -------------->
+        <h2 data-aos="fade-up"  URLTarget="#about" onclick="copyHrefUrl(event)" class="cursor-pointer font-semibold text-blue-600 uppercase tracking-widest flex justify-center items-center gap-2"><i class="bi bi-hash"></i> About Us</h2>
+        <h3 data-aos="fade-up"  class="text-5xl font-bold text-blue-950">Join our happy clients over years</h3>
+        <p  data-aos="fade-up" class="text-gray-500">Our clinic's mission is to deliver exceptional dental care through a combination of state-of-the-art technology, gentle techniques, and a commitment to patient comfort and satisfaction, with practices located worldwide.</p>
+        <!-------------- Counter -------------->
+        <span class="w-full h-px bg-gray-200"></span>
+        <div class="w-full flex flex-col lg:flex-row justify-center items-center gap-5 lg:gap-0">
+          <div class="flex w-full justify-center items-center gap-3">
+            <p class="text-4xl font-bold text-blue-600">98%</p>
+            <p class="text-lg text-gray-500">Patient Satisfaction Rate</p>
+          </div>
+        </div>
+        <span class="w-full h-px bg-gray-200"></span>
+        <!-------------- More -------------->
+        <div class="w-full flex justify-start items-center gap-10">
+          <div class="flex justify-center items-center gap-3">
+            <a href="about.html" class="bg-blue-600 text-white font-medium px-6 py-4 rounded-full">More About <i class="bi bi-plus-lg"></i></a>
+          </div>
+          <div class="flex justify-center items-center gap-3">
+            <div class="w-16 h-16 rounded-full overflow-hidden">
+              <img src="../media/dr.png" />
+            </div>
+            <div class="flex flex-col justify-center items-start gap-2">
+              <p class="font-bold">DR. Eslam Gamal</p>
+              <p class="text-gray-500">Founder</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="about" class="container mx-auto px-5 mt-20 flex flex-col lg:flex-row justify-center items-center gap-10" data-aos="fade-up">
+      <section id="videos" class="container mx-auto px-5 flex flex-col lg:flex-row justify-center items-center gap-10">
+        <!-------------- Video 1 -------------->
+        <div class="w-full lg:w-1/2 flex flex-col justify-center items-start gap-5">
+          <h3 class="text-3xl font-bold text-blue-950">GAHAR Accreditation</h3>
+          <video controls class="w-full rounded-5xl">
+            <source src="../media/video1.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <!-------------- Video 2 -------------->
+        <div class="w-full lg:w-1/2 flex flex-col justify-center items-start gap-5">
+          <h3 class="text-3xl font-bold text-blue-950">Our Clinic</h3>
+          <video controls class="w-full rounded-5xl">
+            <source src="../media/video2.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </section>
+    </section>
+    <!----------------------------------------- SERVICES ----------------------------------------->
+    <section id="services" class="w-full mt-20 py-20 bg-blue-50" data-aos="fade-up">
+      <div class="container mx-auto px-5 flex flex-col justify-center items-center gap-20">
+        <!-------------- Title -------------->
+        <div class="flex flex-col justify-center items-start gap-5">
+          <h2 URLTarget="#services" onclick="copyHrefUrl(event)" class="cursor-pointer font-semibold text-blue-600 uppercase tracking-widest flex justify-center items-center gap-2"><i class="bi bi-hash"></i> Services</h2>
+          <div class="flex flex-col lg:flex-row justify-between items-start gap-5">
+            <h3 class="text-5xl font-bold text-blue-950 w-full lg:w-2/3">A designed dental services to match your needs</h3>
+            <a href="services.html" class="bg-blue-600 text-white font-medium px-6 py-4 rounded-full">All Services <i class="bi bi-plus-lg"></i></a>
+          </div>
+        </div>
+        <!-------------- Cards Group -------------->
+        <div class="w-full flex flex-col lg:flex-row justify-center gap-5">
+          <!-------------- Card 1 -------------->
+          <div class="w-full lg:w-1/3 flex flex-col justify-center items-center gap-7 p-7 bg-white rounded-5xl shadow-lg">
+            <div class="w-full flex justify-start items-center gap-3">
+              <i class="bi bi-asterisk text-3xl text-white before:bg-blue-600 before:p-2 before:rounded-xl"></i>
+              <h3 class="text-2xl font-bold text-blue-950">Children Dentistry</h3>
+            </div>
+            <span class="w-full h-px bg-gray-200"></span>
+            <div class="w-full flex flex-col justify-center items-start">
+              <p class="w-full text-lg text-gray-500 font-semibold">Includes</p>
+              <p class="text-lg text-gray-500 flex justify-center items-center"><i class="bi bi-dot text-blue-600 text-3xl"></i>Fillings</p>
+              <p class="text-lg text-gray-500 flex justify-center items-center"><i class="bi bi-dot text-blue-600 text-3xl"></i>Root Canal Treatment</p>
+              <p class="text-lg text-gray-500 flex justify-center items-center"><i class="bi bi-dot text-blue-600 text-3xl"></i>Crown & Space Maintainer</p>
+            </div>
+            <img src="../media/s1.jpg" alt="" class="w-full aspect-video rounded-4xl" />
+          </div>
+          <!-------------- Card 2 -------------->
+          <div class="w-full lg:w-1/3 flex flex-col justify-center items-center gap-7 p-7 bg-white rounded-5xl shadow-lg">
+            <div class="w-full flex justify-start items-center gap-3">
+              <i class="bi bi-asterisk text-3xl text-white before:bg-blue-600 before:p-2 before:rounded-xl"></i>
+              <h3 class="text-2xl text-center font-bold text-blue-950">Restorative Dentistry</h3>
+            </div>
+            <span class="w-full h-px bg-gray-200"></span>
+            <div class="w-full flex flex-col justify-center items-start">
+              <p class="w-full text-lg text-gray-500 font-semibold">Includes</p>
+              <p class="text-lg text-gray-500 flex justify-center items-center"><i class="bi bi-dot text-blue-600 text-3xl"></i>Tooth Filling</p>
+              <p class="text-lg text-gray-500 flex justify-center items-center"><i class="bi bi-dot text-blue-600 text-3xl"></i>Dental Implants</p>
+              <p class="text-lg text-gray-500 flex justify-center items-center"><i class="bi bi-dot text-blue-600 text-3xl"></i>Crown & Bridges</p>
+            </div>
+            <img src="../media/s2.jpg" alt="" class="w-full aspect-video rounded-4xl" />
+          </div>
+          <!-------------- Card 3 -------------->
+          <div class="w-full lg:w-1/3 flex flex-col justify-center items-center gap-7 p-7 bg-white rounded-5xl shadow-lg">
+            <div class="w-full flex justify-start items-center gap-3">
+              <i class="bi bi-asterisk text-3xl text-white before:bg-blue-600 before:p-2 before:rounded-xl"></i>
+              <h3 class="text-2xl font-bold text-blue-950">Root Canal Treatment</h3>
+            </div>
+            <span class="w-full h-px bg-gray-200"></span>
+            <div class="w-full flex flex-col justify-center items-start">
+              <p class="w-full text-lg text-gray-500 font-semibold">Includes</p>
+              <p class="text-lg text-gray-500 flex justify-center items-center"><i class="bi bi-dot text-blue-600 text-3xl"></i>RCT for Incisors & Canines</p>
+              <p class="text-lg text-gray-500 flex justify-center items-center"><i class="bi bi-dot text-blue-600 text-3xl"></i>RCT for Premolars</p>
+              <p class="text-lg text-gray-500 flex justify-center items-center"><i class="bi bi-dot text-blue-600 text-3xl"></i>RCT for Molars</p>
+            </div>
+            <img src="../media/s3.jpg" alt="" class="w-full aspect-video rounded-4xl" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!----------------------------------------- Why Choose Us ----------------------------------------->
+    <section id="why-choose-us" class="w-full pt-20 bg-gradient-to-r from-gray-950 to-blue-950" data-aos="fade-up">
+      <div class="container mx-auto px-5 flex flex-col lg:flex-row justify-center items-center gap-10 lg:gap-0">
+        <!-------------- Description -------------->
+        <div class="w-full lg:w-1/3 flex flex-col justify-center items-start gap-10">
+          <h2 URLTarget="#why-choose-us" onclick="copyHrefUrl(event)" class="cursor-pointer font-semibold text-blue-600 uppercase tracking-widest flex justify-center items-center gap-2"><i class="bi bi-hash text-blue-600"></i> WHY CHOOSE US</h2>
+          <h3 class="text-5xl font-bold text-white">Excellence in Service That Meets You Expectation</h3>
+          <p class="text-gray-500">Accurate diagnosis of dental diseases ensures effective treatment plans, helping to maintain oral health and prevent further complications.</p>
+          <a href="contact.html" class="bg-blue-600 text-white font-medium px-6 py-4 rounded-full hover:bg-blue-800 duration-300">Contact Us <i class="bi bi-plus-lg"></i></a>
+        </div>
+        <!-------------- Img -------------->
+        <div class="w-full lg:w-1/3 order-3 lg:order-none">
+          <img src="../media/dr.png" />
+        </div>
+        <!-------------- Info -------------->
+        <div class="w-full lg:w-1/3 flex flex-col justify-center items-start gap-10">
+          <!-------------- Part 1 -------------->
+          <div data-aos="fade-up" class="flex justify-start items-start gap-3">
+            <i class="bi bi-check-lg text-3xl text-white before:mt-1 before:bg-blue-600 before:p-2 before:rounded-xl"></i>
+            <div class="w-full flex flex-col justify-start items-start">
+              <p class="text-xl font-bold text-white">GAHAR Accredited Us</p>
+              <p class="text-white">We are first dental clinic accredited by GAHAR in Aswan.</p>
+            </div>
+          </div>
+          <span class="w-full h-px bg-gray-200/10"></span>
+          <!-------------- Part 2 -------------->
+          <div data-aos="fade-up" class="flex justify-start items-start gap-3">
+            <i class="bi bi-check-lg text-3xl text-white before:mt-1 before:bg-blue-600 before:p-2 before:rounded-xl"></i>
+            <div class="w-full flex flex-col justify-start items-start">
+              <p class="text-xl font-bold text-white">Highest Rated Dental Clinic in Aswan</p>
+              <p class="text-white">#1 dental clinic rated in Aswan.</p>
+            </div>
+          </div>
+          <span class="w-full h-px bg-gray-200/10"></span>
+          <!-------------- Part 3 -------------->
+          <div data-aos="fade-up" class="flex justify-start items-start gap-3">
+            <i class="bi bi-check-lg text-3xl text-white before:mt-1 before:bg-blue-600 before:p-2 before:rounded-xl"></i>
+            <div class="w-full flex flex-col justify-start items-start">
+              <p class="text-xl font-bold text-white">24/7 Of Caring</p>
+              <p class="text-white">The goal of our clinic is to provide friendly, caring dentistry.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!----------------------------------------- TESTIMONIAL ----------------------------------------->
+    <section id="testimonials" class="w-full py-20">
+      <div class="container mx-auto px-5 flex flex-col justify-center items-center gap-10" data-aos="fade-up">
+        <!-------------- Title -------------->
+        <div class="w-full flex flex-col justify-center items-start gap-5">
+          <h2 URLTarget="#testimonials" onclick="copyHrefUrl(event)" class="cursor-pointer font-semibold text-blue-600 uppercase tracking-widest flex justify-center items-center gap-2"><i class="bi bi-hash"></i> TESTIMONIAL</h2>
+          <div class="w-full flex flex-col lg:flex-row justify-between gap-5">
+            <h3 class="text-5xl font-bold text-blue-950">What clients say about us?</h3>
+            <a href="https://maps.app.goo.gl/uyEDqoGWzAqYrnP57" target="_blank" class="bg-blue-600 text-white font-medium px-6 py-4 rounded-full flex justify-center items-center gap-1">Check all reviews<i class="bi bi-plus-lg"></i></a>
+          </div>
+        </div>
+        <!-------------- Reviews -------------->
+        <div class="w-full rounded-5xl p-20 bg-blue-50">
+          <!-------------- Review Body -------------->
+          <div id="review" class="flex flex-col gap-10">
+            <div class="flex flex-col justify-start items-start gap-10">
+              <i class="text-5xl text-blue-600 bi bi-pin-angle"></i>
+              <p class="text-xl font-semibold text-gray-950/70"></p>
+            </div>
+
+            <div class="w-full flex justify-between items-center">
+              <div class="flex justify-center items-center gap-3">
+                <img src="" class="w-12 h-12 rounded-full border-2 border-blue-600" />
+                <div class="flex flex-col justify-center items-center gap-2">
+                  <p class="text-xl font-bold author text-black/80">John Doe</p>
+                </div>
+              </div>
+
+              <div class="flex justify-center items-center gap-5">
+                <button id="previous-review" class="bg-blue-600 text-white font-medium px-5 py-4 rounded-2xl"><i class="bi bi-arrow-left"></i></button>
+                <button id="next-review" class="bg-blue-600 text-white font-medium px-5 py-4 rounded-2xl"><i class="bi bi-arrow-right"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!----------------------------------------- SEE THE TRANSFORMATION ----------------------------------------->
+    <section id="transformation" class="w-full py-20 bg-gradient-to-r from-gray-950 to-blue-950" data-aos="fade-up">
+      <div class="container mx-auto px-5 flex flex-col justify-center items-center gap-10">
+        <!-------------- Title -------------->
+        <div class="flex flex-col justify-center items-start gap-5">
+          <h2 URLTarget="#transformation" onclick="copyHrefUrl(event)" class="cursor-pointer font-semibold text-blue-600 uppercase tracking-widest flex justify-center items-center gap-2"><i class="bi bi-hash"></i> SEE THE TRANSFORMATION</h2>
+          <div class="flex flex-col lg:flex-row justify-between items-start gap-5">
+            <h3 class="text-5xl font-bold text-white w-full lg:w-2/3">Stunning results that showcase the life changing impact</h3>
+            <a href="contact.html" class="bg-blue-600 text-white font-medium px-6 py-4 rounded-full">Contact Now <i class="bi bi-plus-lg"></i></a>
+          </div>
+        </div>
+        <!-------------- Review -------------->
+        <div class="w-full flex flex-col lg:flex-row justify-center items-center gap-10">
+          <div class="w-full lg:w-1/3 flex flex-col gap-5">
+            <p class="text-2xl font-semibold text-white">Before</p>
+            <div class="w-full rounded-se-5xl rounded-es-5xl border-4 border-white overflow-hidden">
+              <img src="../media/transformation-img-before.jpg" alt="before" class="w-full scale-105" />
+            </div>
+          </div>
+          <div class="w-full lg:w-1/3 flex flex-col gap-5">
+            <p class="text-2xl font-semibold text-white">After</p>
+            <div class="w-full rounded-se-5xl rounded-es-5xl border-4 border-white overflow-hidden">
+              <img src="../media/transformation-img-after.jpg" alt="after" class="w-full scale-105" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!----------------------------------------- FAQS ----------------------------------------->
+    <section id="faqs" class="w-full pt-20 py-20">
+      <div class="container mx-auto px-5 flex flex-col lg:flex-row justify-center items-center gap-10" data-aos="fade-up">
+        <!-------------- Description -------------->
+        <div class="w-full lg:w-1/2 flex flex-col justify-center items-start gap-10">
+          <!-------------- Title -------------->
+          <h2 URLTarget="#faqs" onclick="copyHrefUrl(event)" class="cursor-pointer font-semibold text-blue-600 uppercase tracking-widest flex justify-center items-center gap-2"><i class="bi bi-hash"></i> FAQS</h2>
+          <h3 class="text-5xl font-bold text-blue-950">Everything you need to know about dental care</h3>
+          <p class="text-gray-500">Find quick answers to common questions about our dental services, procedures, and patient care in our FAQ section.</p>
+          <!-------------- Info -------------->
+          <div class="flex justify-center items-center gap-10 py-5 px-10 bg-blue-50 rounded-5xl">
+            <i class="bi bi-telephone-fill text-5xl text-blue-600"></i>
+            <div class="flex flex-col gap-3">
+              <!-- <p class="text-gray-500">We always take care of your smile</p> -->
+              <h4 class="text-gray-950 font-semibold text-3xl">24/7 Emergency</h4>
+              <p class="text-gray-500">(+20) 01111-33-8461</p>
+            </div>
+          </div>
+        </div>
+        <!-------------- Questions -------------->
+        <div class="w-full lg:w-1/2 h-full flex flex-col gap-5">
+          <!--------- 1 --------->
+          <div data-aos="fade-up" class="faq-item w-full rounded-2xl bg-blue-50 overflow-hidden">
+            <button class="faq-question w-full text-start text-xl text-black font-medium px-6 py-4">Does teeth whitening cause harm?</button>
+            <div class="faq-answer hidden p-5 ps-7 pt-0 text-lg text-blue-950">
+              <p>Teeth whitening is generally safe when done correctly, but it can cause temporary sensitivity and gum irritation in some cases. It's essential to follow the instructions carefully and consult a dentist before starting any whitening treatment.</p>
+            </div>
+          </div>
+          <!--------- 2 --------->
+          <div data-aos="fade-up" class="faq-item w-full rounded-2xl bg-blue-50 overflow-hidden">
+            <button class="faq-question w-full text-start text-xl text-black font-medium px-6 py-4">Why is going to the dentist regularly so important?</button>
+            <div class="faq-answer hidden p-5 ps-7 pt-0 text-lg text-blue-950">
+              <p>Regular dental visits help prevent oral diseases, catch issues early, and maintain overall oral health.</p>
+            </div>
+          </div>
+          <!--------- 2 --------->
+          <div data-aos="fade-up" class="faq-item w-full rounded-2xl bg-blue-50 overflow-hidden">
+            <button class="faq-question w-full text-start text-xl text-black font-medium px-6 py-4">Why should I floss?</button>
+            <div class="faq-answer hidden p-5 ps-7 pt-0 text-lg text-blue-950">
+              <p>Flossing removes plaque and food particles from between teeth where a toothbrush can't reach, helping to prevent cavities and gum disease.</p>
+            </div>
+          </div>
+          <!--------- 3 --------->
+          <div data-aos="fade-up" class="faq-item w-full rounded-2xl bg-blue-50 overflow-hidden">
+            <button class="faq-question w-full text-start text-xl text-black font-medium px-6 py-4">How can I relieve tooth sensitivity?</button>
+            <div class="faq-answer hidden p-5 ps-7 pt-0 text-lg text-blue-950">
+              <p>Using desensitizing toothpaste, avoiding very hot or cold foods, and discussing treatment options with your dentist can help relieve sensitivity.</p>
+            </div>
+          </div>
+          <!--------- 4 --------->
+          <div data-aos="fade-up" class="faq-item w-full rounded-2xl bg-blue-50 overflow-hidden">
+            <button class="faq-question w-full text-start text-xl text-black font-medium px-6 py-4">How can I avoid cavities?</button>
+            <div class="faq-answer hidden p-5 ps-7 pt-0 text-lg text-blue-950">
+              <p>Maintain good oral hygiene by brushing twice a day, flossing daily, and limiting sugary snacks and drinks.</p>
+            </div>
+          </div>
+          <!--------- 5 --------->
+          <div data-aos="fade-up" class="faq-item w-full rounded-2xl bg-blue-50 overflow-hidden">
+            <button class="faq-question w-full text-start text-xl text-black font-medium px-6 py-4">What are dental sealants, and who should get them?</button>
+            <div class="faq-answer hidden p-5 ps-7 pt-0 text-lg text-blue-950">
+              <p>Dental sealants are protective coatings applied to the chewing surfaces of back teeth to prevent cavities, often recommended for children and teenagers.</p>
+            </div>
+          </div>
+          <!--------------------->
+        </div>
+      </div>
+    </section>
+
+    <!----------------------------------------- BOOK YOUR APPOINTMENT ----------------------------------------->
+    <section id="book" class="w-full bg-blue-50 pt-20 py-20" data-aos="fade-up">
+      <div class="container mx-auto px-5 flex flex-col justify-center items-center gap-20">
+        <!-------------- Title -------------->
+        <div class="w-full flex flex-col justify-start items-start gap-5">
+          <h2 URLTarget="#book" onclick="copyHrefUrl(event)" class="cursor-pointer font-semibold text-blue-600 uppercase tracking-widest flex justify-center items-center gap-2"><i class="bi bi-hash"></i> BOOK YOUR APPOINTMENT</h2>
+          <div class="flex flex-col lg:flex-row justify-center items-start gap-10">
+            <div class="w-full lg:w-1/2 flex flex-col justify-center items-start gap-5">
+              <h3 class="text-5xl font-bold text-blue-950">Book your dental visit online with Prime Dental Clinic</h3>
+            </div>
+            <div class="w-full lg:w-1/2 flex flex-col justify-center items-center">
+              <p class="text-gray-500">Ready to take the next step towards a healthier smile? Use our easy online booking system to schedule your dental appointment. Simply select a convenient date and time, provide some basic information, and we’ll handle the rest.</p>
+            </div>
+          </div>
+        </div>
+        <!-------------- Info -------------->
+        <div class="w-full flex flex-col lg:flex-row justify-center gap-5">
+          <!-------------- Working Hours -------------->
+          <div class="w-full lg:w-1/3 flex flex-col gap-10">
+            <div class="w-full bg-blue-950 p-10 flex flex-col gap-5 rounded-3xl">
+              <h3 class="text-2xl font-bold text-white">Working Hours</h3>
+              <span class="w-full h-px bg-white/30"></span>
+              <div class="w-full flex justify-between items-center font-bold">
+                <p class="text-white">Saturday to Thursday</p>
+                <p class="text-white">9 AM : 10 PM</p>
+              </div>
+              <div class="w-full flex justify-between items-center font-bold">
+                <p class="text-white">Friday</p>
+                <p class="text-white">Closed</p>
+              </div>
+            </div>
+            <!-------------- Call Us -------------->
+            <div class="flex justify-center items-center gap-10 py-5 px-7 bg-white rounded-5xl">
+              <i class="bi bi-telephone-fill text-5xl text-blue-600"></i>
+              <div class="flex flex-col gap-3">
+                <!-- <p class="text-gray-500">We always take care of your smile</p> -->
+                <h4 class="text-gray-950 font-semibold text-3xl">24/7 Emergency</h4>
+                <p class="text-gray-500">(+20) 01111-33-8461</p>
+              </div>
+            </div>
+          </div>
+          <!-------------- Form -------------->
+          <div class="w-full lg:w-2/3 flex justify-center items-center bg-white rounded-5xl">
+            <form class="w-full p-10 flex flex-col justify-center items-center gap-5">
+              <label for="name" class="w-full text-start block text-sm font-medium text-gray-600">Name <span class="text-red-600">*</span></label>
+              <input type="text" id="name" class="w-full p-3 -mt-3 rounded-full border border-gray-200" placeholder="Eslam Gamal" required />
+              <label for="phone" class="w-full text-start block text-sm font-medium text-gray-600">Phone Number <span class="text-red-600">*</span></label>
+              <input type="text" id="phone" class="w-full p-3 -mt-3 rounded-full border border-gray-200" placeholder="01111338461" required />
+              <label for="problem" class="w-full text-start block text-sm font-medium text-gray-600">Complaint <span class="text-red-600">*</span></label>
+              <textarea id="problem" class="w-full p-3 -mt-3 rounded-2xl border border-gray-200" placeholder="Constant pain" required></textarea>
+              <label for="date" class="w-full text-start block text-sm font-medium text-gray-600">Select a date <span class="text-red-600">*</span></label>
+              <input type="date" id="date" class="w-full p-3 -mt-3 rounded-full border border-gray-200" required />
+              <label for="time" class="w-full text-start block text-sm font-medium text-gray-600">Select a time <span class="text-red-600">*</span></label>
+              <select id="time" class="w-full p-3 -mt-3 rounded-full border border-gray-200" required>
+                <option value="">Select a time</option>
+                <option value="9:00 AM">9:00 AM</option>
+                <option value="10:00 AM">10:00 AM</option>
+                <option value="11:00 AM">11:00 AM</option>
+                <option value="12:00 PM">12:00 PM</option>
+                <option value="1:00 PM">1:00 PM</option>
+                <option value="2:00 PM">2:00 PM</option>
+                <option value="3:00 PM">3:00 PM</option>
+                <option value="4:00 PM">4:00 PM</option>
+                <option value="5:00 PM">5:00 PM</option>
+                <option value="6:00 PM">6:00 PM</option>
+                <option value="7:00 PM">7:00 PM</option>
+                <option value="8:00 PM">8:00 PM</option>
+                <option value="9:00 PM">9:00 PM</option>
+                <option value="10:00 PM">10:00 PM</option>
+              </select>
+              <label for="visit-type" class="w-full text-start block text-sm font-medium text-gray-600">Select a visit type <span class="text-red-600">*</span></label>
+              <select id="visit-type" class="w-full p-3 -mt-3 rounded-full border border-gray-200" required>
+                <option value="">Select a visit type</option>
+                <option value="Dental Extraction">Dental Extraction</option>
+                <option value="General Checkup">General Checkup</option>
+                <option value="Other">Other</option>
+              </select>
+              <button class="w-full bg-blue-600 text-white font-medium px-6 py-4 rounded-full" onclick="booking()">Book Now</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!----------------------------------------- FOOTER ----------------------------------------->
+    <footer id="footer" class="w-full py-10 bg-gradient-to-r from-gray-950 to-blue-950 text-white"></footer>
+    <!----------------------------------------- Scripts ----------------------------------------->
+    <script>
+      AOS.init();
+    </script>
+    <script src="../js/script.js"></script>
+  </body>
+</html>
