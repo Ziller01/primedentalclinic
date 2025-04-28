@@ -61,7 +61,9 @@ let lgStyle = `hidden lg:flex justify-center items-center gap-5 text-lg text-gra
 let navEN = `
 <div class="container mx-auto flex justify-between items-center gap-5">
   <div class="">
-    <img src="/media/logo.svg" alt="logo" class="h-14" />
+    <a href="/">
+      <img src="/media/logo.svg" alt="logo" class="h-14" />
+    </a>
   </div>
   <ul id="n-list" class="hidden lg:flex justify-center items-center gap-5 text-lg text-gray-950">
     <i id="n-x" class="bi bi-x text-3xl text-black absolute top-5 right-5 block lg:hidden"></i>
@@ -84,7 +86,9 @@ let navEN = `
 `
 let navAR = `<div class="container mx-auto flex justify-between items-center gap-5">
   <div class="">
-    <img src="/media/logo.svg" alt="logo" class="h-14" />
+    <a href="/">
+      <img src="/media/logo.svg" alt="logo" class="h-14" />
+    </a>
   </div>
   <ul id="n-list" class="hidden lg:flex justify-center items-center gap-5 text-lg text-gray-950">
     <i id="n-x" class="bi bi-x text-3xl text-black absolute top-5 right-5 block lg:hidden"></i>
@@ -159,7 +163,9 @@ window.addEventListener('load', (e) => {
     <!-------------- Part 1 -------------->
     <div class="w-full flex flex-col lg:flex-row justify-between items-start gap-10">
       <div class="w-full lg:w-1/3 flex flex-col justify-center items-start gap-10">
-        <img src="../media/logo.png" alt="logo" class="h-16 brightness-[1000%]" />
+        <a href="/">
+          <img src="../media/logo.png" alt="logo" class="h-16 brightness-[1000%]" />
+        </a>
         <p class="">First dental clinic in Aswan accredited by GAHAR</p>
         <div class="flex flex-col justify-center items-start gap-5">
           <p class="font-bold">Support@PrimeDentalClinic.net</p>
@@ -203,7 +209,9 @@ window.addEventListener('load', (e) => {
     <!-------------- الجزء 1 -------------->
     <div class="w-full flex flex-col lg:flex-row justify-between items-start gap-10">
       <div class="w-full lg:w-1/3 flex flex-col justify-center items-start gap-10">
-        <img src="../media/logo.png" alt="الشعار" class="h-16 brightness-[1000%]" />
+        <a href="/">
+          <img src="../media/logo.png" alt="logo" class="h-16 brightness-[1000%]" />
+        </a>
         <p class="">أول عيادة أسنان في أسوان معتمدة من قبل GAHAR</p>
         <div class="flex flex-col justify-center items-start gap-5">
           <p class="font-bold">Support@PrimeDentalClinic.net</p>
