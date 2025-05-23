@@ -111,12 +111,15 @@ let navAR = `<div class="container mx-auto flex justify-between items-center gap
 `
 
 const currentPath = window.location.pathname
-const currentLang = currentPath.startsWith("/ar") ? "ar" : "en"
+const currentLang = currentPath.startsWith("/ar") || currentPath == "/" ? "ar" : "en"
 navbar.innerHTML = currentLang == "en" ? navEN : navAR
 
 function toggleLang() {
+  console.log(currentPath);
+
   const newLang = currentLang == "en" ? "ar" : "en"
-  const newUrl = currentPath.replace(`/${currentLang}`, `/${newLang}`)
+  const newUrl = currentPath.startsWith("/ar") || currentPath.startsWith("/en") ? currentPath.replace(`/${currentLang}`, `/${newLang}`) : `/${newLang}`
+  // return console.log(newUrl, newLang);
   window.location.href = newUrl
 }
 
@@ -174,11 +177,11 @@ window.addEventListener('load', (e) => {
       </div>
       <!---------------------->
       <div class="flex flex-col justify-start items-start gap-5">
-        <h3 class="text-2xl font-bold">Quick Links</h3>
-        <a href="/en/" class="border-s border-blue-600 hover:text-blue-600 duration-300 ps-3">Home</a>
-        <a href="/en/about.html" class="border-s border-blue-600 hover:text-blue-600 duration-300 ps-3">About Us</a>
-        <a href="/en/services.html" class="border-s border-blue-600 hover:text-blue-600 duration-300 ps-3">Services</a>
-        <a href="/en/contact.html" class="border-s border-blue-600 hover:text-blue-600 duration-300 ps-3">Contact Us</a>
+        <h3 class="text-2xl font-bold">Find us on</h3>
+        <a href="https://vezeeta.com/en/dr/doctor-eslam-gamal-dentistry" target="_blank" class="border-s border-blue-600 hover:text-blue-600 duration-300 ps-3">vezeeta</a>
+        <a href="https://ekshef.com/dr-49636/%D8%AF%D9%83%D8%AA%D9%88%D8%B1-%D8%A7%D8%B3%D9%84%D8%A7%D9%85-%D8%AC%D9%85%D8%A7%D9%84-%D8%AA%D8%AE%D8%B5%D8%B5-%D8%A7%D8%B3%D9%86%D8%A7%D9%86" target="_blank" class="border-s border-blue-600 hover:text-blue-600 duration-300 ps-3">ekshef</a>
+        <a href="https://clinido.com/en/drprofile/1038384/29701" target="_blank" class="border-s border-blue-600 hover:text-blue-600 duration-300 ps-3">clinido</a>
+        <a href="https://aswandir.com/listing/%D8%B9%D9%8A%D8%A7%D8%AF%D9%87-%D8%A8%D8%B1%D8%A7%D9%8A%D9%85-%D8%A7%D9%84%D8%AA%D8%AE%D8%B5%D8%B5%D9%8A%D9%87-%D9%84%D8%B7%D8%A8-%D9%88-%D8%AC%D8%B1%D8%A7%D8%AD%D9%87-%D8%A7%D9%84%D8%A7%D8%B3%D9%86" target="_blank" class="border-s border-blue-600 hover:text-blue-600 duration-300 ps-3">aswandir</a>
       </div>
       <!---------------------->
       <div class="flex flex-col justify-start items-start gap-5">
@@ -191,10 +194,10 @@ window.addEventListener('load', (e) => {
       <!---------------------->
       <div class="flex flex-col justify-start items-start gap-5">
         <h3 class="text-2xl font-bold">Our Services</h3>
-        <a href="" class="border-s border-blue-600 hover:text-blue-600 duration-300 ps-3">Restorative Dentistry</a>
-        <a href="" class="border-s border-blue-600 hover:text-blue-600 duration-300 ps-3">Root Canal Treatment</a>
-        <a href="" class="border-s border-blue-600 hover:text-blue-600 duration-300 ps-3">Removable Dentures</a>
-        <a href="" class="border-s border-blue-600 hover:text-blue-600 duration-300 ps-3">Children Dentistry</a>
+        <a href="/en/services.html" class="border-s border-blue-600 hover:text-blue-600 duration-300 ps-3">Restorative Dentistry</a>
+        <a href="/en/services.html" class="border-s border-blue-600 hover:text-blue-600 duration-300 ps-3">Root Canal Treatment</a>
+        <a href="/en/services.html" class="border-s border-blue-600 hover:text-blue-600 duration-300 ps-3">Removable Dentures</a>
+        <a href="/en/services.html" class="border-s border-blue-600 hover:text-blue-600 duration-300 ps-3">Children Dentistry</a>
       </div>
     </div>
     <span class="w-full h-px bg-gray-600/30"></span>
@@ -206,7 +209,7 @@ window.addEventListener('load', (e) => {
   `
 
   let footerAR = `<div class="container mx-auto px-5 flex flex-col justify-center items-center gap-10">
-    <!-------------- الجزء 1 -------------->
+    <!-------------- Part 1 -------------->
     <div class="w-full flex flex-col lg:flex-row justify-between items-start gap-10">
       <div class="w-full lg:w-1/3 flex flex-col justify-center items-start gap-10">
         <a href="/">
@@ -220,11 +223,11 @@ window.addEventListener('load', (e) => {
       </div>
       <!---------------------->
       <div class="flex flex-col justify-start items-start gap-5">
-        <h3 class="text-2xl font-bold">روابط سريعة</h3>
-        <a href="/ar/" class="border-s border-blue-600 hover:text-blue-600 duration-300 ps-3">الصفحة الرئيسية</a>
-        <a href="/ar/about.html" class="border-s border-blue-600 hover:text-blue-600 duration-300 ps-3">عنا</a>
-        <a href="/ar/services.html" class="border-s border-blue-600 hover:text-blue-600 duration-300 ps-3">خدماتنا</a>
-        <a href="/ar/contact.html" class="border-s border-blue-600 hover:text-blue-600 duration-300 ps-3">تواصل معنا</a>
+        <h3 class="text-2xl font-bold">جدنا علي</h3>
+        <a href="https://vezeeta.com/ar/dr/doctor-eslam-gamal-dentistry" target="_blank" class="border-s border-blue-600 hover:text-blue-600 duration-300 ps-3">فيزيتا</a>
+        <a href="https://ekshef.com/dr-49636/%D8%AF%D9%83%D8%AA%D9%88%D8%B1-%D8%A7%D8%B3%D9%84%D8%A7%D9%85-%D8%AC%D9%85%D8%A7%D9%84-%D8%AA%D8%AE%D8%B5%D8%B5-%D8%A7%D8%B3%D9%86%D8%A7%D9%86" target="_blank" class="border-s border-blue-600 hover:text-blue-600 duration-300 ps-3">اكشف</a>
+        <a href="https://clinido.com/ar/drprofile/1038384/29701" target="_blank" class="border-s border-blue-600 hover:text-blue-600 duration-300 ps-3">كلينيدو</a>
+        <a href="https://aswandir.com/listing/%D8%B9%D9%8A%D8%A7%D8%AF%D9%87-%D8%A8%D8%B1%D8%A7%D9%8A%D9%85-%D8%A7%D9%84%D8%AA%D8%AE%D8%B5%D8%B5%D9%8A%D9%87-%D9%84%D8%B7%D8%A8-%D9%88-%D8%AC%D8%B1%D8%A7%D8%AD%D9%87-%D8%A7%D9%84%D8%A7%D8%B3%D9%86" target="_blank" class="border-s border-blue-600 hover:text-blue-600 duration-300 ps-3">دليل اسوان</a>
       </div>
       <!---------------------->
       <div class="flex flex-col justify-start items-start gap-5">
@@ -237,15 +240,15 @@ window.addEventListener('load', (e) => {
       <!---------------------->
       <div class="flex flex-col justify-start items-start gap-5">
         <h3 class="text-2xl font-bold">خدماتنا</h3>
-        <a href="services.html" class="border-s border-blue-600 hover:text-blue-600 duration-300 ps-3">علاج الأسنان الترميمي</a>
-        <a href="services.html" class="border-s border-blue-600 hover:text-blue-600 duration-300 ps-3">علاج قناة الجذر</a>
-        <a href="services.html" class="border-s border-blue-600 hover:text-blue-600 duration-300 ps-3">الاطقم المتحركة</a>
-        <a href="services.html" class="border-s border-blue-600 hover:text-blue-600 duration-300 ps-3">علاج أطفال</a>
+        <a href="/ar/services.html" class="border-s border-blue-600 hover:text-blue-600 duration-300 ps-3">علاج الأسنان الترميمي</a>
+        <a href="/ar/services.html" class="border-s border-blue-600 hover:text-blue-600 duration-300 ps-3">علاج قناة الجذر</a>
+        <a href="/ar/services.html" class="border-s border-blue-600 hover:text-blue-600 duration-300 ps-3">الاطقم المتحركة</a>
+        <a href="/ar/services.html" class="border-s border-blue-600 hover:text-blue-600 duration-300 ps-3">علاج أطفال</a>
       </div>
 
     </div>
     <span class="w-full h-px bg-gray-600/30"></span>
-    <!-------------- الجزء 2 -------------->
+    <!-------------- Part 2 -------------->
     <div class="w-full flex flex-col lg:flex-row justify-between items-center gap-5">
       <h3 class="">Copyright © 2023-2025 All Rights Reserved.</h3>
     </div>
