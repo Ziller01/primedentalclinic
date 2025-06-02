@@ -71,6 +71,7 @@ let navEN = `
     <a id="n-about" href="/en/about.html" class="cursor-pointer duration-300 flex justify-center items-center gap-2 hover:text-blue-600/80 px-1">About us</a>
     <a id="n-services" href="/en/services.html" class="cursor-pointer duration-300 flex justify-center items-center gap-2 hover:text-blue-600/80 px-1">Services</a>
     <a id="n-contracts" href="/en/contracts.html" class="cursor-pointer duration-300 flex justify-center items-center gap-2 hover:text-blue-600/80 px-1">Contracts</a>
+    <a id="n-contracts" href="/en/accredited.html" class="cursor-pointer duration-300 flex justify-center items-center gap-2 hover:text-blue-600/80 px-1">Accredited by</a>
     <a id="n-contact" href="/en/contact.html" class="cursor-pointer duration-300 flex justify-center items-center gap-2 hover:text-blue-600/80 px-1">Contact us</a>
   </ul>
   <div class="flex justify-center items-center gap-2 lg:gap-5">
@@ -96,6 +97,7 @@ let navAR = `<div class="container mx-auto flex justify-between items-center gap
     <a id="n-about" href="/ar/about.html" class="cursor-pointer duration-300 flex justify-center items-center gap-2 hover:text-blue-600/80 px-1">عنا</a>
     <a id="n-services" href="/ar/services.html" class="cursor-pointer duration-300 flex justify-center items-center gap-2 hover:text-blue-600/80 px-1">خدماتنا</a>
     <a id="n-contracts" href="/ar/contracts.html" class="cursor-pointer duration-300 flex justify-center items-center gap-2 hover:text-blue-600/80 px-1">التعاقدات</a>
+    <a id="n-contracts" href="/ar/accredited.html" class="cursor-pointer duration-300 flex justify-center items-center gap-2 hover:text-blue-600/80 px-1">معتمدون من</a>
     <a id="n-contact" href="/ar/contact.html" class="cursor-pointer duration-300 flex justify-center items-center gap-2 hover:text-blue-600/80 px-1">تواصل معنا</a>
   </ul>
   <div class="flex justify-center items-center gap-2 lg:gap-5">
