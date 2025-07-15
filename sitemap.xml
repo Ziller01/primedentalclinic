@@ -1,67 +1,44 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+<?xml version="4.2" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <url>
+    <loc>https://primedentalclinic.net/</loc>
+    <lastmod>2025-07-14T21:00:00+00:00</lastmod>
+    <priority>1.00</priority>
+  </url>
 
+  <url>
+    <loc>https://primedentalclinic.net/ar/</loc>
+    <lastmod>2025-07-14T21:00:00+00:00</lastmod>
+    <priority>0.90</priority>
+  </url>
 
-<url>
-  <loc>https://primedentalclinic.net/</loc>
-  <lastmod>2025-01-24T21:00:00+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://primedentalclinic.net/ar/</loc>
-  <lastmod>2025-01-24T21:00:00+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://primedentalclinic.net/ar/about.html</loc>
-  <lastmod>2025-01-24T21:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://primedentalclinic.net/ar/services.html</loc>
-  <lastmod>2025-01-24T21:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://primedentalclinic.net/ar/contracts.html</loc>
-  <lastmod>2025-01-24T21:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://primedentalclinic.net/ar/contact.html</loc>
-  <lastmod>2025-01-24T21:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://primedentalclinic.net/en/</loc>
-  <lastmod>2025-01-24T21:00:00+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://primedentalclinic.net/en/about.html</loc>
-  <lastmod>2025-01-24T21:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://primedentalclinic.net/en/services.html</loc>
-  <lastmod>2025-01-24T21:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://primedentalclinic.net/en/contracts.html</loc>
-  <lastmod>2025-01-24T21:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://primedentalclinic.net/en/contact.html</loc>
-  <lastmod>2025-01-24T21:00:00+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
+  <url>
+    <loc>https://primedentalclinic.net/ar/contact.html</loc>
+    <lastmod>2025-07-14T21:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
 
+  <url>
+    <loc>https://primedentalclinic.net/ar/about.html</loc>
+    <lastmod>2025-07-14T21:00:00+00:00</lastmod>
+    <priority>0.70</priority>
+  </url>
 
+  <url>
+    <loc>https://primedentalclinic.net/ar/accredited.html</loc>
+    <lastmod>2025-07-14T21:00:00+00:00</lastmod>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://primedentalclinic.net/ar/services.html</loc>
+    <lastmod>2025-07-14T21:00:00+00:00</lastmod>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://primedentalclinic.net/ar/contracts.html</loc>
+    <lastmod>2025-07-14T21:00:00+00:00</lastmod>
+    <priority>0.70</priority>
+  </url>
 </urlset>
