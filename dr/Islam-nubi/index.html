@@ -21,7 +21,7 @@
   <body class="fonts-tajawal">
     <div id="container" class="flex flex-col justify-center items-center gap-10">
       <!---------------------------------------- Navbar ---------------------------------------->
-      <nav class="w-full -mt-10 z-50 sticky top-0 text-lg backdrop-blur bg-blue-600 text-white overflow-hidden">
+      <nav class="w-full z-50 sticky top-0 text-lg backdrop-blur bg-blue-600 text-white overflow-hidden">
         <div class="md:container md:mx-auto flex justify-between items-center p-3 px-5">
           <a href="/" class="flex items-center gap-2">
             <img src="./media/badge.png" alt="" class="h-10 rounded-full" />
@@ -41,7 +41,7 @@
         </div>
       </nav>
       <!---------------------------------------- Header ---------------------------------------->
-      <header id="home" class="p-10 w-full container mx-auto flex flex-col-reverse lg:flex-row justify-center gap-5 lg:gap-0 overflow-hidden">
+      <header id="home" class="p-10 -mt-10 w-full container mx-auto flex flex-col-reverse lg:flex-row justify-center gap-5 lg:gap-0 overflow-hidden">
         <div class="w-full lg:w-1/2 h-full flex flex-col justify-start items-start gap-5">
           <div class="flex flex-col">
             <h2 class="mt-10 w-fit text-xl font-medium relative text-blue-600 before:absolute before:-end-5 before:translate-x-full before:top-1/2 before:min-h-0.5 before:rounded-full before:w-12 before:bg-blue-600">Welcome to my portfolio</h2>
@@ -69,8 +69,8 @@
           </div>
           <!-- <p class="text-2xl">With over ten years of experience in dentistry Dr Eslam Gamal has built a reputation for providing exceptional care with a focus on patient comfort and longterm oral health A graduate of AlRazai University Dr Eslam Gamal has since his early years honed his skills through a unique combination of continuing academic education and extensive practical experience He has earned three diplomas in advanced dental implants and has also completed courses in fixed and cosmetic prosthetics Global healthcare with three international licenses Dr Eslam Gamal is licensed to practice in three countries the Arab Republic of Egypt the United Arab Emirates and the Republic of Sudan reflecting the confidence of various healthcare institutions in his competence and high skill He is also accredited by the General Authority for Accreditation and Healthcare Supervision GAHAR a certification that adds significant credibility to his professional record and confirms his commitment</p> -->
         </div>
-        <div class="w-full lg:w-1/2 flex justify-end">
-          <div class="h-full w-full lg:w-10/12 flex justify-center items-center rounded-lg">
+        <div class="w-full lg:w-1/2 flex justify-center items-center">
+          <div class="w-full lg:scale-150 xl:scale-100 aspect-square flex justify-center items-center rounded-lg -z-1">
             <img src="./media/dr7.jpg" alt="Logo" class="h-full scale-x-[-1] rounded-lg grayscale-contrast-100" />
           </div>
         </div>
@@ -78,16 +78,16 @@
       <!---------------------------------------- Trusted by ---------------------------------------->
       <section id="s0" class="w-full flex flex-col items-center gap-5 overflow-hidden0">
         <h2 class="text-xl uppercase tracking-widest">Partner With</h2>
-        <div class="w-full max-w-full pb-5 flex justify-center items-center gap-10 overflow-x-auto">
-          <img src="./media/trust 7.png" alt="Trusted by 7" class="h-32 shadow-lg bg-white rounded-lg" />
-          <img src="./media/trust 4.jpg" alt="Trusted by 4" class="h-32 shadow-lg bg-white rounded-lg" />
-          <img src="./media/trust 5.jpg" alt="Trusted by 5" class="h-32 shadow-lg bg-white rounded-lg" />
-          <img src="./media/trust 2.png" alt="Trusted by 2" class="h-32 shadow-lg bg-white rounded-lg" />
-          <img src="./media/trust 3.jpg" alt="Trusted by 3" class="h-32 shadow-lg bg-white rounded-lg" />
-          <img src="./media/trust 1.jpg" alt="Trusted by 1" class="h-32 shadow-lg bg-white rounded-lg" />
-          <img src="./media/trust 6.png" alt="Trusted by 6" class="h-32 shadow-lg bg-white rounded-lg p-5" />
-          <img src="./media/trust 8.jpg" alt="Trusted by 8" class="h-32 shadow-lg bg-white rounded-lg" />
-          <img src="./media/trust 9.JPG" alt="Trusted by 9" class="h-32 shadow-lg bg-white rounded-lg" />
+        <div class="w-full pb-5 flex justify-evenly items-center gap-5 lg:gap-10 overflow-x-auto">
+          <img src="./media/trust 7.png" alt="Trusted by 7" class="h-24 lg:h-32 shadow-lg bg-white rounded-lg" />
+          <img src="./media/trust 4.jpg" alt="Trusted by 4" class="h-24 lg:h-32 shadow-lg bg-white rounded-lg" />
+          <img src="./media/trust 5.jpg" alt="Trusted by 5" class="h-24 lg:h-32 shadow-lg bg-white rounded-lg" />
+          <img src="./media/trust 2.png" alt="Trusted by 2" class="h-24 lg:h-32 shadow-lg bg-white rounded-lg" />
+          <img src="./media/trust 3.jpg" alt="Trusted by 3" class="h-24 lg:h-32 shadow-lg bg-white rounded-lg" />
+          <img src="./media/trust 1.jpg" alt="Trusted by 1" class="h-24 lg:h-32 shadow-lg bg-white rounded-lg" />
+          <img src="./media/trust 6.png" alt="Trusted by 6" class="h-24 lg:h-32 shadow-lg bg-white rounded-lg p-5" />
+          <img src="./media/trust 8.jpg" alt="Trusted by 8" class="h-24 lg:h-32 shadow-lg bg-white rounded-lg" />
+          <img src="./media/trust 9.JPG" alt="Trusted by 9" class="h-24 lg:h-32 shadow-lg bg-white rounded-lg" />
         </div>
       </section>
       <!---------------------------------------- Certified by ---------------------------------------->
@@ -152,31 +152,31 @@
         </div>
         <div id="card-group" class="w-full flex flex-col lg:flex-row justify-center items-center gap-1 pt-10">
           <!------------------------- Card 1 ------------------------->
-          <div class="bg-black hover:scale-110 h-48 max-lg:max-h-fit w-full lg:h-fit lg:w-48 lg:max-w-fit max-lg:hover:h-2000 lg:hover:w-2000 hover:shadow-2xl max-lg:rounded-t-xl lg:rounded-s-xl hover:rounded-xl overflow-hidden hover:z-10 transition-all duration-500">
+          <div class="bg-black hover:scale-110 h-full max-lg:max-h-full w-full lg:h-fit lg:w-48 lg:max-w-fit max-lg:hover:h-2000 lg:hover:w-2000 hover:shadow-2xl max-lg:rounded-t-xl lg:rounded-s-xl hover:rounded-xl overflow-hidden hover:z-10 transition-all duration-500">
             <a href="/media/Certificate 1.png" target="_blank" class="w-full">
               <img src="./media/Certificate 1.png" alt="Certificate" class="lg:h-150  object-cover object-top-left0 opacity-75 hover:opacity-100" />
             </a>
           </div>
           <!------------------------- Card 2 ------------------------->
-          <div class="bg-black hover:scale-110 h-48 max-lg:max-h-fit w-full lg:h-fit lg:w-48 lg:max-w-fit max-lg:hover:h-2000 lg:hover:w-2000 hover:shadow-2xl  hover:rounded-xl overflow-hidden hover:z-10 transition-all duration-500">
+          <div class="bg-black hover:scale-110 h-full max-lg:max-h-full w-full lg:h-fit lg:w-48 lg:max-w-fit max-lg:hover:h-2000 lg:hover:w-2000 hover:shadow-2xl  hover:rounded-xl overflow-hidden hover:z-10 transition-all duration-500">
             <a href="/media/Certificate 2.png" target="_blank" class="w-full">
               <img src="./media/Certificate 2.png" alt="Certificate" class="lg:h-150  object-cover object-top-left0 opacity-75 hover:opacity-100" />
             </a>
           </div>
           <!------------------------- Card 3 ------------------------->
-          <div class="bg-black hover:scale-110 h-48 max-lg:max-h-fit w-full lg:h-fit lg:w-48 lg:max-w-fit max-lg:hover:h-2000 lg:hover:w-2000 hover:shadow-2xl  hover:rounded-xl overflow-hidden hover:z-10 transition-all duration-500">
+          <div class="bg-black hover:scale-110 h-full max-lg:max-h-full w-full lg:h-fit lg:w-48 lg:max-w-fit max-lg:hover:h-2000 lg:hover:w-2000 hover:shadow-2xl  hover:rounded-xl overflow-hidden hover:z-10 transition-all duration-500">
             <a href="/media/Certificate 3.png" target="_blank" class="w-full">
               <img src="./media/Certificate 3.png" alt="Certificate" class="lg:h-150  object-cover object-top-left0 opacity-75 hover:opacity-100" />
             </a>
           </div>
           <!------------------------- Card 4 ------------------------->
-          <div class="bg-black hover:scale-110 h-48 max-lg:max-h-fit w-full lg:h-fit lg:w-48 lg:max-w-fit max-lg:hover:h-2000 lg:hover:w-2000 hover:shadow-2xl  hover:rounded-xl overflow-hidden hover:z-10 transition-all duration-500">
+          <div class="bg-black hover:scale-110 h-full max-lg:max-h-full w-full lg:h-fit lg:w-48 lg:max-w-fit max-lg:hover:h-2000 lg:hover:w-2000 hover:shadow-2xl  hover:rounded-xl overflow-hidden hover:z-10 transition-all duration-500">
             <a href="/media/Certificate 4.png" target="_blank" class="w-full">
               <img src="./media/Certificate 4.png" alt="Certificate" class="lg:h-150  object-cover object-top-left0 opacity-75 hover:opacity-100" />
             </a>
           </div>
           <!------------------------- Card 5 ------------------------->
-          <div class="bg-black hover:scale-110 h-48 max-lg:max-h-fit w-full lg:h-fit lg:w-48 lg:max-w-fit max-lg:hover:h-2000 lg:hover:w-2000 hover:shadow-2xl max-lg:rounded-b-xl lg:rounded-e-xl hover:rounded-xl overflow-hidden hover:z-10 transition-all duration-500">
+          <div class="bg-black hover:scale-110 h-full max-lg:max-h-full w-full lg:h-fit lg:w-48 lg:max-w-fit max-lg:hover:h-2000 lg:hover:w-2000 hover:shadow-2xl max-lg:rounded-b-xl lg:rounded-e-xl hover:rounded-xl overflow-hidden hover:z-10 transition-all duration-500">
             <a href="/media/Certificate 5.png" target="_blank" class="w-full">
               <img src="./media/Certificate 5.png" alt="Certificate" class="lg:h-150  object-cover object-top-left0 opacity-75 hover:opacity-100" />
             </a>
