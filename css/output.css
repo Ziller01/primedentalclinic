@@ -877,16 +877,16 @@ video {
   gap: 0.75rem;
 }
 
+.gap-32 {
+  gap: 8rem;
+}
+
 .gap-5 {
   gap: 1.25rem;
 }
 
 .gap-7 {
   gap: 1.75rem;
-}
-
-.gap-32 {
-  gap: 8rem;
 }
 
 .overflow-hidden {
@@ -915,6 +915,10 @@ video {
 
 .rounded-full {
   border-radius: 9999px;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
 }
 
 .rounded-br-5xl {
@@ -1328,6 +1332,11 @@ video {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
+.contrast-150 {
+  --tw-contrast: contrast(1.5);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
 .duration-300 {
   transition-duration: 300ms;
 }
@@ -1359,21 +1368,6 @@ video {
 
 .fonts-tajawal {
   font-family: "Tajawal", serif;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'AraHamahAlislam-Regular';
-
-  src: url('./fonts/hamah/AraHamahAlislam-Regular/AraHamahAlislam-Regular.eot?') format('eot'),
-    url('./fonts/hamah/AraHamahAlislam-Regular/AraHamahAlislam-Regular.otf') format('opentype'),
-    url('./fonts/hamah/AraHamahAlislam-Regular/AraHamahAlislam-Regular.woff') format('woff'),
-    url('./fonts/hamah/AraHamahAlislam-Regular/AraHamahAlislam-Regular.ttf') format('truetype'),
-    url('./fonts/hamah/AraHamahAlislam-Regular/AraHamahAlislam-Regular.svg#AraHamahAlislam-Regular') format('svg');
-}
-
-.fonts-hamah {
-  font-family: "AraHamahAlislam-Regular", serif;
   font-style: normal;
 }
 
@@ -1479,6 +1473,12 @@ video {
   color: rgb(37 99 235 / 0.8);
 }
 
+.hover\:shadow-xl:hover {
+  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
 .dark\:bg-gray-950:is(.dark *) {
   --tw-bg-opacity: 1;
   background-color: rgb(3 7 18 / var(--tw-bg-opacity, 1));
@@ -1516,6 +1516,10 @@ video {
     display: none;
   }
 
+  .lg\:h-32 {
+    height: 8rem;
+  }
+
   .lg\:w-1\/2 {
     width: 50%;
   }
@@ -1546,10 +1550,6 @@ video {
 
   .lg\:w-4\/5 {
     width: 80%;
-  }
-
-  .lg\:w-48 {
-    width: 12rem;
   }
 
   .lg\:w-64 {
