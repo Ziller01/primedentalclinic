@@ -27,7 +27,7 @@ function bookingAR() {
 // ================================================================= 404
 
 // window.addEventListener('load', function () {
-//   if (!document.querySelector('body').classList.contains('fonts-plus-jakarta-sans')) {
+//   if (!document.querySelector('body').classList.contains('fonts-baloo-bhaijaan-2')) {
 //     window.location.href = '/404.html';
 //   }
 // });
@@ -67,13 +67,14 @@ let navEN = `
   </div>
   <ul id="n-list" class="hidden lg:flex justify-center items-center gap-5 text-lg text-gray-950">
     <i id="n-x" class="bi bi-x text-3xl text-black absolute top-5 right-5 block lg:hidden"></i>
-    <a id="n-home" href="/en/" class="cursor-pointer duration-300 flex justify-center items-center gap-2 hover:text-blue-600/80 px-1">Home</a>
-    <a id="n-about" href="/en/about.html" class="cursor-pointer duration-300 flex justify-center items-center gap-2 hover:text-blue-600/80 px-1">About us</a>
-    <a id="n-services" href="/en/services.html" class="cursor-pointer duration-300 flex justify-center items-center gap-2 hover:text-blue-600/80 px-1">Services</a>
-    <a id="n-contracts" href="/en/contracts.html" class="cursor-pointer duration-300 flex justify-center items-center gap-2 hover:text-blue-600/80 px-1">Contracts</a>
-    <a id="n-accredited" href="/en/accredited.html" class="cursor-pointer duration-300 flex justify-center items-center gap-2 hover:text-blue-600/80 px-1">Accredited by</a>
-    <a id="n-partners" href="/en/partners.html" class="cursor-pointer duration-300 flex justify-center items-center gap-2 hover:text-blue-600/80 px-1">Partner with</a>
-    <a id="n-contact" href="/en/contact.html" class="cursor-pointer duration-300 flex justify-center items-center gap-2 hover:text-blue-600/80 px-1">Contact us</a>
+    <a id="n-home" href="/en/" class="cursor-pointer text-center duration-300 flex justify-center items-center hover:text-blue-600/80 px-1">Home</a>
+    <a id="n-about" href="/en/about.html" class="cursor-pointer text-center duration-300 flex justify-center items-center hover:text-blue-600/80 px-1">About us</a>
+    <a id="n-services" href="/en/services.html" class="cursor-pointer text-center duration-300 flex justify-center items-center hover:text-blue-600/80 px-1">Services</a>
+    <a id="n-contracts" href="/en/contracts.html" class="cursor-pointer text-center duration-300 flex justify-center items-center hover:text-blue-600/80 px-1">Contracts</a>
+    <a id="n-accredited" href="/en/accredited.html" class="cursor-pointer text-center duration-300 flex justify-center items-center hover:text-blue-600/80 px-1">Accredited by</a>
+    <a id="n-partners" href="/en/partners.html" class="cursor-pointer text-center duration-300 flex justify-center items-center hover:text-blue-600/80 px-1">Partner with</a>
+    <a id="n-contact" href="/en/contact.html" class="cursor-pointer text-center duration-300 flex justify-center items-center hover:text-blue-600/80 px-1">Contact us</a>
+    <a id="n-prices" href="/en/prices.html" class="cursor-pointer text-center px-2 py-1 flex justify-center items-center text-lg rounded-lg text-white font-semibold bg-blue-600 hover:shadow-xl hover:-translate-y-1 duration-300">Prices</a>
     </ul>
   <div class="flex justify-center items-center gap-2 lg:gap-5">
     <i class="bi bi-telephone-fill lg:text-xl text-white before:bg-blue-600 before:p-4 before:rounded-full"></i>
@@ -94,13 +95,14 @@ let navAR = `<div class="container mx-auto flex justify-between items-center gap
   </div>
   <ul id="n-list" class="hidden lg:flex justify-center items-center gap-5 text-lg text-gray-950">
     <i id="n-x" class="bi bi-x text-3xl text-black absolute top-5 right-5 block lg:hidden"></i>
-    <a id="n-home" href="/ar/" class="cursor-pointer duration-300 flex justify-center items-center gap-2 hover:text-blue-600/80 px-1">الرئيسية</a>
-    <a id="n-about" href="/ar/about.html" class="cursor-pointer duration-300 flex justify-center items-center gap-2 hover:text-blue-600/80 px-1">عنا</a>
-    <a id="n-services" href="/ar/services.html" class="cursor-pointer duration-300 flex justify-center items-center gap-2 hover:text-blue-600/80 px-1">خدماتنا</a>
-    <a id="n-contracts" href="/ar/contracts.html" class="cursor-pointer duration-300 flex justify-center items-center gap-2 hover:text-blue-600/80 px-1">التعاقدات</a>
-    <a id="n-accredited" href="/ar/accredited.html" class="cursor-pointer duration-300 flex justify-center items-center gap-2 hover:text-blue-600/80 px-1">معتمدون من</a>
-    <a id="n-partners" href="/ar/partners.html" class="cursor-pointer duration-300 flex justify-center items-center gap-2 hover:text-blue-600/80 px-1">متعاونون مع</a>
-    <a id="n-contact" href="/ar/contact.html" class="cursor-pointer duration-300 flex justify-center items-center gap-2 hover:text-blue-600/80 px-1">تواصل معنا</a>
+    <a id="n-home" href="/ar/" class="cursor-pointer text-center duration-300 flex justify-center items-center hover:text-blue-600/80 px-1">الرئيسية</a>
+    <a id="n-about" href="/ar/about.html" class="cursor-pointer text-center duration-300 flex justify-center items-center hover:text-blue-600/80 px-1">عنا</a>
+    <a id="n-services" href="/ar/services.html" class="cursor-pointer text-center duration-300 flex justify-center items-center hover:text-blue-600/80 px-1">خدماتنا</a>
+    <a id="n-contracts" href="/ar/contracts.html" class="cursor-pointer text-center duration-300 flex justify-center items-center hover:text-blue-600/80 px-1">التعاقدات</a>
+    <a id="n-accredited" href="/ar/accredited.html" class="cursor-pointer text-center duration-300 flex justify-center items-center hover:text-blue-600/80 px-1">معتمدون من</a>
+    <a id="n-partners" href="/ar/partners.html" class="cursor-pointer text-center duration-300 flex justify-center items-center hover:text-blue-600/80 px-1">متعاونون مع</a>
+    <a id="n-contact" href="/ar/contact.html" class="cursor-pointer text-center duration-300 flex justify-center items-center hover:text-blue-600/80 px-1">تواصل معنا</a>
+    <a id="n-prices" href="/ar/prices.html" class="cursor-pointer text-center px-2 py-1 flex justify-center items-center text-lg rounded-lg text-white font-semibold bg-blue-600 hover:shadow-xl hover:-translate-y-1 duration-300">معرفة سعر خدمتك</a>
   </ul>
   <div class="flex justify-center items-center gap-2 lg:gap-5">
     <i class="bi bi-telephone-fill lg:text-xl text-white before:bg-blue-600 before:p-4 before:rounded-full"></i>
@@ -115,7 +117,7 @@ let navAR = `<div class="container mx-auto flex justify-between items-center gap
 `
 
 const currentPath = window.location.pathname
-const currentLang = currentPath.startsWith("/ar") || currentPath == "/" ? "ar" : "en"
+const currentLang = currentPath.startsWith("/ar") || ["/", "/index.html"].some(s => currentPath == s) ? "ar" : "en"
 navbar.innerHTML = currentLang == "en" ? navEN : navAR
 
 function toggleLang() {
