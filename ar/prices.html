@@ -37,30 +37,80 @@
   <body class="fonts-baloo-bhaijaan-2">
     <!----------------------------------------- NAVBAR ----------------------------------------->
     <nav id="navbar" class="w-full min-h-20 z-30 px-5 py-3 sticky0 top-0 bg-white text-blue-600 shadow-b-xl"></nav>
-    <!----------------------------------------- Prices ----------------------------------------->
-    <main id="prices" class="w-full container mx-auto px-5 md:px-0 py-20 flex flex-col justify-center items-center gap-20">
-      <header class="w-full flex flex-col justify-center items-center gap-5 rounded-3xl p-10">
-        <h1 class="w-full text-center text-5xl font-bold">معرفة سعر خدمتك</h1>
-        <p class="w-full text-center text-3xl">خدمة بتوفر نظام لحساب سعر الخدمة المتوقع عند الذهاب الي العيادة</p>
-        <p class="w-full text-center text-3xl">ويمكنك الاستناد عليها لمعرفة السعر التقريبي للسوق</p>
+    <!----------------------------------------- Nubi ----------------------------------------->
+    <!----------------------------------------- Main ----------------------------------------->
+    <main id="prices" class="w-full px-5 md:px-0 py-20 flex flex-col justify-center items-center gap-20 relative">
+      <header class="w-full container mx-auto flex flex-col justify-center items-center gap-5 rounded-3xl p-10">
+        <h1 class="w-full text-center text-5xl font-bold">إعرفة سعر خدمتك</h1>
+        <p class="w-full text-center text-3xl">خدمة بتوفر لعماء برايم نظام لحساب سعر الخدمة المتوقع عند الذهاب الي العيادة</p>
       </header>
-      <article id="steps" class="w-full flex flex-col justify-center items-center">
-        <div id="start-point" class="w-full flex justify-start gap-5 text-black">
+      <span class="w-full lg:w-1/2 aspect-square rounded-full absolute start-1/2 translate-x-1/2 -translate-y-1/2 top-0 -z-10" style="background: radial-gradient(circle, rgba(37, 99, 235, 0.25), transparent 70%)"></span>
+      <div id="chats" class="w-full container mx-auto flex flex-col justify-center items-center relative">
+        <img src="../media/Nubi 101.png" alt="" class="h-[640px] absolute left-0 -z-10 0-translate-x-1/3" />
+        <div id="msg-1" class="w-full flex justify-start gap-5 text-black">
           <!-- Roadmap CheckPoint -->
           <div id="roadmap-point" class="w-12 min-h-full relative flex justify-center items-center overflow-hidden">
             <span class="size-8 p-2 bg-blue-600/50 rounded-full flex justify-center items-center"><span class="size-full bg-blue-600 rounded-full"></span></span>
-            <span id="roadmap-line" class="hidden"></span>
+            <span id="roadmap-line" class="h-full w-0.5 absolute bg-blue-600 top-1/2 translate-x-1/2 start-1/2"></span>
           </div>
           <!-- Options -->
           <div class="w-full max-w-xl my-2.5 flex flex-col gap-2.5 glass-tab rounded-3xl border-s-px border-s-blue-600 relative overflow-hidden">
             <span class="h-full aspect-square rounded-full absolute top-0 start-0 translate-x-1/2 ltr:-translate-x-1/2" style="background: radial-gradient(circle, rgba(37, 99, 235, 0.25), transparent 60%)"></span>
             <h2 class="text-lg font-semibold">هل انت مستعد؟</h2>
-            <div id="options" class="w-full flex flex-wrap justify-center gap-5">
-              <button id="start-btn" class="w-full btn-base glass-btn-default rounded-xl" onclick="alert('Coming Soon...')">ابدأ</button>
+            <div id="options" class="w-full flex justify-center gap-5">
+              <button id="start-btn" class="w-full glass-btn-default rounded-xl" onclick="alert('Coming Soon...')">ابدأ</button>
             </div>
           </div>
         </div>
-      </article>
+        <div id="msg-1" class="w-full flex justify-start gap-5 text-black">
+          <!-- Roadmap CheckPoint -->
+          <div id="roadmap-point" class="w-12 min-h-full relative flex justify-center items-center overflow-hidden">
+            <span class="size-8 p-2 bg-blue-600/50 rounded-full flex justify-center items-center"><span class="size-full bg-blue-600 rounded-full"></span></span>
+            <span id="roadmap-line" class="h-full w-0.5 absolute bg-blue-600 top-0 translate-x-1/2 start-1/2"></span>
+          </div>
+          <!-- Options -->
+          <div class="w-full max-w-xl my-2.5 flex flex-col gap-2.5 glass-tab rounded-3xl border-s-px border-s-blue-600 relative overflow-hidden">
+            <span class="h-full aspect-square rounded-full absolute top-0 start-0 translate-x-1/2 ltr:-translate-x-1/2" style="background: radial-gradient(circle, rgba(37, 99, 235, 0.25), transparent 60%)"></span>
+            <h2 class="text-lg font-semibold">هل انت مستعد؟</h2>
+            <div id="options" class="w-full flex justify-center gap-5">
+              <button id="start-btn" class="w-full glass-btn-default rounded-xl" onclick="alert('Coming Soon...')">اطفال</button>
+              <button id="start-btn" class="w-full glass-btn-default rounded-xl" onclick="alert('Coming Soon...')">كبار</button>
+            </div>
+          </div>
+        </div>
+        <div id="msg-1" class="w-full flex justify-start gap-5 text-black">
+          <!-- Roadmap CheckPoint -->
+          <div id="roadmap-point" class="w-12 min-h-full relative flex justify-center items-center overflow-hidden">
+            <span class="size-8 p-2 bg-blue-600/50 rounded-full flex justify-center items-center"><span class="size-full bg-blue-600 rounded-full"></span></span>
+            <span id="roadmap-line" class="h-full w-0.5 absolute bg-blue-600 top-0 translate-x-1/2 start-1/2"></span>
+          </div>
+          <!-- Options -->
+          <div class="w-full max-w-xl my-2.5 flex flex-col gap-2.5 glass-tab rounded-3xl border-s-px border-s-blue-600 relative overflow-hidden">
+            <span class="h-full aspect-square rounded-full absolute top-0 start-0 translate-x-1/2 ltr:-translate-x-1/2" style="background: radial-gradient(circle, rgba(37, 99, 235, 0.25), transparent 60%)"></span>
+            <h2 class="text-lg font-semibold">هل انت مستعد؟</h2>
+            <div id="options" class="w-full flex justify-center gap-5">
+              <button id="start-btn" class="w-full glass-btn-default rounded-xl" onclick="alert('Coming Soon...')">حشوات</button>
+              <button id="start-btn" class="w-full glass-btn-default rounded-xl" onclick="alert('Coming Soon...')">زراعة</button>
+              <button id="start-btn" class="w-full glass-btn-default rounded-xl" onclick="alert('Coming Soon...')">علاج عصب</button>
+            </div>
+          </div>
+        </div>
+        <div id="msg-1" class="w-full flex justify-start gap-5 text-black">
+          <!-- Roadmap CheckPoint -->
+          <div id="roadmap-point" class="w-12 min-h-full relative flex justify-center items-center overflow-hidden">
+            <span class="size-8 p-2 bg-blue-600/50 rounded-full flex justify-center items-center"><span class="size-full bg-blue-600 rounded-full"></span></span>
+            <span id="roadmap-line" class="h-full w-0.5 absolute bg-blue-600 -top-1/2 translate-x-1/2 start-1/2"></span>
+          </div>
+          <!-- Options -->
+          <div class="w-full max-w-xl my-2.5 flex flex-col gap-2.5 glass-tab rounded-3xl border-s-px border-s-blue-600 relative overflow-hidden">
+            <span class="h-full aspect-square rounded-full absolute top-0 start-0 translate-x-1/2 ltr:-translate-x-1/2" style="background: radial-gradient(circle, rgba(37, 99, 235, 0.25), transparent 60%)"></span>
+            <h2 class="text-lg font-semibold">هل انت مستعد؟</h2>
+            <div id="options" class="w-full flex justify-center gap-5">
+              <button id="start-btn" class="w-full glass-btn-default rounded-xl" onclick="alert('Coming Soon...')">2000 جنيه مصري</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
     <!----------------------------------------- Scripts ----------------------------------------->
     <script src="../js/script.js"></script>

@@ -102,7 +102,7 @@ let navAR = `<div class="container mx-auto flex justify-between items-center gap
     <a id="n-accredited" href="/ar/accredited.html" class="cursor-pointer text-center duration-300 flex justify-center items-center hover:text-blue-600/80 px-1">معتمدون من</a>
     <a id="n-partners" href="/ar/partners.html" class="cursor-pointer text-center duration-300 flex justify-center items-center hover:text-blue-600/80 px-1">متعاونون مع</a>
     <a id="n-contact" href="/ar/contact.html" class="cursor-pointer text-center duration-300 flex justify-center items-center hover:text-blue-600/80 px-1">تواصل معنا</a>
-    <a id="n-prices" href="/ar/prices.html" class="cursor-pointer text-center px-2 py-1 flex justify-center items-center text-lg rounded-lg text-white font-semibold bg-blue-600 hover:shadow-xl hover:-translate-y-1 duration-300">معرفة سعر خدمتك</a>
+    <a id="n-prices" href="/ar/prices.html" class="cursor-pointer text-center px-2 py-1 flex justify-center items-center text-lg rounded-lg text-white font-semibold bg-blue-600 hover:shadow-xl hover:-translate-y-1 duration-300">إعرفة سعر خدمتك</a>
   </ul>
   <div class="flex justify-center items-center gap-2 lg:gap-5">
     <i class="bi bi-telephone-fill lg:text-xl text-white before:bg-blue-600 before:p-4 before:rounded-full"></i>
