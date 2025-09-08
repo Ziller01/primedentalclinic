@@ -1,216 +1,241 @@
-let prices = [
+let components = [
+
+    // !--------------------------------------------------------------------------- [AR]
+
     {
-        id: 1,
-        name: "كبار (+13)",
-        value: [
-            {
-                id: 1,
-                name: "جراحة الأسنان",
-                value: [
-                    {
-                        id: 1,
-                        name: "الخلع",
-                        value: [
-                            { id: 1, name: "عادي", value: 500 },
-                            { id: 2, name: "ضرس العقل", value: 700 },
-                            { id: 3, name: "جراحي", value: 1000 },
-                            { id: 4, name: "ضرس عقل جراحيًا", value: 2000 },
-                        ],
-                    },
-                    {
-                        id: 2,
-                        name: "العلاجات",
-                        value: [
-                            { id: 1, name: "تنظيف خراج", value: 700 },
-                            { id: 2, name: "تنظيف جرح خلع", value: 400 },
-                            { id: 3, name: "إزالة نتوء عظمي", value: 1000 },
-                            { id: 4, name: "خياطة", value: 300 },
-                        ],
-                    },
-                ],
-            },
-            {
-                id: 2,
-                name: "العلاج التحفظي",
-                value: [
-                    {
-                        id: 1,
-                        name: "الحشوات",
-                        value: [
-                            { id: 1, name: "مؤقتة", value: 300 },
-                            { id: 2, name: "زجاجية علاجية", value: 900 },
-                            { id: 3, name: "ضوئية أمامية", value: 1200 },
-                            { id: 4, name: "ضوئية خلفية", value: 1200 },
-                            { id: 5, name: "حشو مرحلتين", value: 1500 },
-                        ],
-                    },
-                ],
-            },
-            {
-                id: 3,
-                name: "علاج الجذور",
-                value: [
-                    {
-                        id: 1,
-                        name: "الأسنان",
-                        value: [
-                            {
-                                id: 1,
-                                name: "علاج جذور",
-                                value: [{ id: 1, name: "أمامية", value: 2600 }],
-                            },
-                            {
-                                id: 2,
-                                name: "إعادة علاج جذور",
-                                value: [{ id: 1, name: "أمامية", value: 3100 }],
-                            },
-                        ],
-                    },
-                    {
-                        id: 2,
-                        name: "الضروس",
-                        value: [
-                            {
-                                id: 1,
-                                name: "علاج جذور",
-                                value: [
-                                    { id: 1, name: "أمامية", value: 3000 },
-                                    { id: 2, name: "خلفية", value: 3400 },
-                                ],
-                            },
-                            {
-                                id: 2,
-                                name: "إعادة علاج جذور",
-                                value: [
-                                    { id: 1, name: "أمامية", value: 3500 },
-                                    { id: 2, name: "خلفية", value: 4000 },
-                                ],
-                            },
-                        ],
-                    },
-                ],
-            },
-            {
-                id: 4,
-                name: "اللثة",
-                value: [
-                    {
-                        id: 1,
-                        name: "تنظيف الأسنان",
-                        value: [
-                            { id: 1, name: "روتين (جلسة واحدة)", value: 800 },
-                            { id: 2, name: "عميق (2-3 جلسات)", value: 1200 },
-                            { id: 3, name: "تلميع", value: 400 },
-                        ],
-                    },
-                    {
-                        id: 2,
-                        name: "العلاجات",
-                        value: [
-                            { id: 1, name: "إزالة جيب لثوي", value: 300 },
-                            { id: 2, name: "تبييض الأسنان", value: 4000 },
-                            { id: 3, name: "إزالة لثة", value: 200 },
-                            {
-                                id: 4,
-                                name: "إزالة لحمية في ضرس العقل",
-                                value: 500,
-                            },
-                        ],
-                    },
-                ],
-            },
-            {
-                id: 5,
-                name: "تعويضات الأسنان",
-                value: [
-                    {
-                        id: 1,
-                        name: "أجهزة وقائية",
-                        value: [{ id: 1, name: "عضة ليلية", value: 1000 }],
-                    },
-                    {
-                        id: 2,
-                        name: "تعويضات متحركة",
-                        value: [
-                            {
-                                id: 1,
-                                name: "طقم جزئي",
-                                value: [
-                                    { id: 1, name: "علوي وسفلي", value: "600/سن" },
-                                    { id: 2, name: "علوي أو سفلي", value: "600/سن" },
-                                ],
-                            },
-                            {
-                                id: 2,
-                                name: "طقم كامل",
-                                value: [
-                                    { id: 1, name: "علوي وسفلي", value: 10000 },
-                                    { id: 2, name: "علوي أو سفلي", value: 5000 },
-                                ],
-                            },
-                        ],
-                    },
-                    {
-                        id: 3,
-                        name: "تعويضات ثابتة",
-                        value: [
-                            { id: 1, name: "تاج زيركونيوم كامل", value: 3000 },
-                            { id: 2, name: "قشور خزفية ايماكس", value: 4000 },
-                            { id: 3, name: "تثبيت تاج أو إعادة تثبيت", value: 500 },
-                            { id: 4, name: "زراعة الأسنان", value: 12000 },
-                        ],
-                    },
-                ],
-            },
-        ],
+        id: "ar",
+        title: "ابدأ",
+        values: [
+            { title: "كبار (13+)", next: "ar-adult" },
+            { title: "صغار (13-)", next: "ar-kids" },
+        ]
+    },
+
+    // !--------------------------------------------------------------------------- [AR] -> Adult (+13)
+
+    {
+        id: "ar-adult",
+        title: "كبار (+13)",
+        values: [
+            { title: "ألم", next: "ar-adult-pain" },
+            { title: "تورم", next: "ar-adult-swelling" },
+            // { title: "فقدان", next: "ar-adult-loss" },
+            // { title: "تجميل", next: "ar-adult-cosmotic" },
+            { title: "نزيف", next: "ar-adult-bleeding" },
+            { title: "رائحة كريهة", next: "ar-adult-halitosis" },
+        ]
+    },
+
+    // ?--------------------------------------------------------------------------- [AR] -> Adult -> [Fixed] 
+
+    // -------------------------------------- [AR] -> Adult -> RCT-Re-TCT / Filling
+
+    {
+        id: "ar-adult-filling",
+        title: "حشو أسنان",
+        values: [
+            { title: "حشو مؤقت", value: 300 },
+            { title: "حشو علاجي", value: 900 },
+            { title: "حشو دائم (كومبوزيد)", value: 1_200 },
+        ]
     },
     {
-        id: 2,
-        name: "أطفال (-13)",
-        value: [
-            { id: 1, name: "الخلع", value: 400 },
-            {
-                id: 2,
-                name: "الحشوات",
-                value: [
-                    { id: 1, name: "مؤقتة", value: 300 },
-                    { id: 2, name: "زجاجية علاجية", value: 700 },
-                    { id: 3, name: "ضوئية", value: 800 },
-                ],
-            },
-            {
-                id: 3,
-                name: "العلاجات",
-                value: [
-                    { id: 1, name: "نظافة الأسنان", value: 500 },
-                    { id: 2, name: "تلميع الأسنان", value: 400 },
-                    { id: 3, name: "إزالة لثة", value: 300 },
-                ],
-            },
-            {
-                id: 4,
-                name: "التركيبات",
-                value: [{ id: 1, name: "طربوش/تاج معدني", value: 800 }],
-            },
-            {
-                id: 5,
-                name: "علاج الجذور",
-                value: [
-                    { id: 1, name: "جزئي", value: 1000 },
-                    { id: 2, name: "كامل", value: 1800 },
-                ],
-            },
-            {
-                id: 6,
-                name: "أدوات حفظ",
-                value: [
-                    { id: 1, name: "حافظ أسنان", value: 800 },
-                    { id: 2, name: "حافظ مسافة", value: 1500 },
-                ],
-            },
-        ],
+        id: "ar-adult-rct",
+        title: "حشو عصب",
+        values: [
+            { title: "سن امامي", value: 2_600 },
+            { title: "ضرس امامي", value: 3_000 },
+            { title: "ضرس خلفي", value: 3_400 },
+        ]
     },
+    {
+        id: "ar-adult-rerct",
+        title: "اعادة حشو عصب",
+        values: [
+            { title: "سن امامي", value: 3_100 },
+            { title: "ضرس امامي", value: 3_500 },
+            { title: "ضرس خلفي", value: 4_000 },
+        ]
+    },
+
+    // -------------------------------------- [AR] -> Adult -> Gum / Halitosis
+
+    {
+        id: "ar-adult-gum",
+        title: "علاج خراج لثوي",
+        values: [
+            { title: "فتح خراج لثوس وتنظيف لثة", value: 1_300 },
+        ]
+    },
+    
+    {
+        id: "ar-adult-halitosis",
+        title: "علاج رائحة الفم الكريهة",
+        values: [
+            { title: "تنظيف وازالة الرواسب الجيرية", value: 800 },
+        ]
+    },
+    
+    // -------------------------------------- [AR] -> Adult -> haliS
+
+    {
+        id: "ar-adult-oooo",
+        title: "علاج اللثة",
+        values: [
+            { title: "فتح خراج لثوس", value: 500 },
+            { title: "تنظيف لثة", value: 800 },
+            { title: "تلميع الأسنان", value: 0 },
+            { title: "ازالة لثة", value: 0 },
+        ]
+    },
+    
+    // -------------------------------------- [AR] -> Adult -> Loss
+
+    {
+        id: "ar-adult-",
+        title: "علاج فقدان الأسنان",
+        values: [
+            { title: "زراعة الأسنان", value: "8,500:25,000 ج.م / الزرعة" },
+            { title: "سن/ضرس متحرك", value: "150:700 ج.م / سن-ضرس" },
+            { title: "كبري/جسر", value: "6,000:15,000 ج.م / كبري-جسر" },
+            { title: "", value: 0 },
+        ]
+    },
+
+    // -------------------------------------- [AR] -> Adult -> Emergancy
+
+    {
+        id: "ar-adult-er",
+        title: "طوارئ",
+        type: "er",
+        values: [
+            { title: "اتصل بنا فوراً!", value: "(+20) 01111-33-8461", notPrice: true },
+        ]
+    },
+
+    // ?---------------------------------------------------------------------------- [AR] -> Adult -> Pain
+
+    {
+        id: "ar-adult-pain",
+        title: "ألم الاسنان",
+        values: [
+            { title: "سن/ضرس معالج من قبل", next: "ar-adult-pain-treated" },
+            { title: "سن/ضرس طبيعي/تسوس", next: "ar-adult-pain-natural" },
+        ]
+    },
+
+    // -------------------------------------- [AR] -> Adult -> Pain -> treated
+
+    {
+        id: "ar-adult-pain-treated",
+        title: "سن/ضرس معالج",
+        values: [
+            { title: "حشو مؤقت/دائم", next: "ar-adult-pain-treated-filled" },
+            { title: "حشو عصب", next: "ar-adult-rerct" },
+        ]
+    },
+
+    {
+        id: "ar-adult-pain-treated-filled",
+        title: "حشو مؤقت/دائم",
+        values: [
+            { title: "مستمر", next: "ar-adult-rct" },
+            { title: "مع الاكل/العض", next: "ar-adult-filling" },
+        ]
+    },
+
+    // -------------------------------------- [AR] -> Adult -> Pain -> treated
+
+    {
+        id: "ar-adult-pain-natural",
+        title: "سن/ضرس طبيعي",
+        values: [
+            { title: "مستمر", next: "ar-adult-rct" },
+            { title: "مع الاكل/العض", next: "ar-adult-filling" },
+        ]
+    },
+
+    // ?---------------------------------------------------------------------------- [AR] -> Adult -> Swelling
+
+    {
+        id: "ar-adult-swelling",
+        title: "تورم الأسنان",
+        values: [
+            { title: "تورم موضعي", next: "ar-adult-swelling-local" },
+            { title: "تورم عام", next: "ar-adult-swelling-general" },
+        ]
+    },
+
+    // -------------------------------------- [AR] -> Adult -> Swelling -> Local
+
+    {
+        id: "ar-adult-swelling-local",
+        title: "تورم موضعي",
+        values: [
+            { title: "خراج لثوي", next: "ar-adult-gum" },
+            { title: "خراج من سن/ضرس", next: "ar-adult-rct" },
+        ]
+    },
+
+    // -------------------------------------- [AR] -> Adult -> Swelling -> General
+
+    {
+        id: "ar-adult-swelling-general",
+        title: "تورم عام",
+        values: [
+            { title: "تورم في الوجه", next: "ar-adult-er" },
+            { title: "تورم تحت الفك", next: "ar-adult-er" },
+        ]
+    },
+
+    // ?---------------------------------------------------------------------------- [AR] -> Adult -> Bleeding
+    
+    {
+        id: "ar-adult-bleeding",
+        title: "نزيف لثوي",
+        values: [
+            { title: "نزيف في اللثة", next: "ar-adult-gum" },
+            { title: "نزيف في الأسنان", next: "ar-adult-gum" },
+        ]
+    },
+    
+    // ?---------------------------------------------------------------------------- [AR] -> Adult -> Loss
+    
+    {
+        id: "ar-adult-loss",
+        title: "فقدان الأسنان",
+        values: [
+            { title: "سن/ضرس واحد", next: "ar-adult-" },
+            { title: "من 2 الي 4 أسنان/أضراس", next: "ar-adult-" },
+            { title: "اكثر من 5 أسنان/اضراس", next: "ar-adult-" },
+        ]
+    },
+
+    // ?---------------------------------------------------------------------------- [AR] -> Adult -> Cosmotic
+    
+    {
+        id: "ar-adult-cosmotic",
+        title: "تجميل الأسنان",
+        values: [
+            { title: "", next: "ar-adult-" },
+            { title: "", next: "ar-adult-" },
+            { title: "", next: "ar-adult-" },
+        ]
+    },
+    
+    // !--------------------------------------------------------------------------- [AR] -> Kids (-13)
+
+    {
+        id: "ar-kids",
+        title: "صغار (-13)",
+        values: [
+            { title: "" }
+        ]
+    },
+
 ];
+
+// ----------------------------------------------------
 
 let checkPoints = {
     none: "hidden",
@@ -219,81 +244,98 @@ let checkPoints = {
     last: "h-full w-0.5 absolute bg-blue-600 -top-1/2 translate-x-1/2 start-1/2",
 }
 
-let currentStep = {
-    path: prices,
-    obj: "Start"
-};
+let chat = document.getElementById("chats");
 
 // ----------------------------------------------------
 
-let element = document.getElementById("chats");
+const nextQuestion = (id, lastId, isValue) => {
+    if (!id) return
+    if (id == "restart") {
+        document.getElementById("chats").innerHTML = `
+          <div id="start" class="w-full flex justify-start gap-5 text-black">
+            <!-- Roadmap CheckPoint -->
+            <div id="roadmap-point" class="w-12 min-h-full relative flex justify-center items-center overflow-hidden">
+              <span class="size-8 p-2 bg-blue-600/50 rounded-full flex justify-center items-center"><span class="size-full bg-blue-600 rounded-full"></span></span>
+              <span id="roadmap-line" class="h-full w-0.5 absolute bg-blue-600 top-1/2 translate-x-1/2 start-1/2 hidden"></span>
+            </div>
+            <!-- Slections -->
+            <div class="w-full max-w-xl my-2.5 flex flex-col gap-2.5 glass-tab rounded-3xl border-s-px border-s-blue-600 relative overflow-hidden">
+              <span class="h-full aspect-square rounded-full absolute top-0 start-0 translate-x-1/2 ltr:-translate-x-1/2" style="background: radial-gradient(circle, rgba(37, 99, 235, 0.25), transparent 60%)"></span>
+              <!-- <h2 class="text-lg font-semibold">هل انت مستعد؟</h2> -->
+              <div id="options" class="w-full flex flex-col lg:flex-row justify-center gap-5">
+                <button id="start-btn" class="w-full glass-btn-default rounded-xl" onclick="nextQuestion('ar','start')">ابدأ</button>
+              </div>
+            </div>
+          </div>
+        `
+        return
+    }
+    let question = components.find(f => f.id == (id || lastId))
+    if (!question && !isValue) return console.log("Question Not Found");
 
-// ----------------------------------------------------
-
-// const nextObj = obj => !!obj && typeof obj === "object" && Object.values(obj).filter(v => v && typeof v === "object" && !Array.isArray(v));
-const nextObjs = obj => !!obj && typeof obj === "object" && Object.entries(obj);
-
-const getPath = (obj, target, path = []) => {
-    for (let k in obj) {
-        if (obj[k] === target) return [...path, k];
-        if (obj[k] && typeof obj[k] === "object") {
-            let p = getPath(obj[k], target, [...path, k]);
-            if (p) return p;
+    // --------------------------
+    let lastQuestion = document.getElementById(lastId)
+    // --------------------------
+    let lastCheckPoint = document.querySelector(`#${lastId} #roadmap-line`)
+    lastCheckPoint.classList.value = lastId == "start" ? checkPoints.start : checkPoints.mid
+    // --------------------------
+    let lastBtns = document.querySelectorAll(`#${lastId} button`)
+    lastBtns.forEach(btn => {
+        if (lastId == "start") {
+            btn.textContent = "أعد المحاولة"
+            btn.attributes.getNamedItem("onclick").value = "nextQuestion('restart','start')"
+        } else {
+            btn.classList.replace("glass-btn-default", btn.id == id ? "glass-btn-selected" : "glass-btn-disabled")
+            btn.attributes.setNamedItem(document.createAttribute("disabled"));
         }
-    }
-};
+    })
+    // --------------------------
 
+    console.log(id, lastId, isValue);
+    let newMsg
 
-
-function start() {
-    const startBtn = document.getElementById("start-btn");
-    const path = getPath(prices, currentStep.obj);
-    // -------------------------------------------------------
-    startBtn.innerHTML = "أعد البدء"
-    element.innerHTML += `
-            <div class="w-full flex justify-start gap-5 text-black">
+    if (isValue) {
+        question = components.find(f => f.id == lastId)
+        console.log(question, lastId);
+        let value = question.values.find(v => v.title == id)
+        console.log(value.value);
+        
+        newMsg = `
+            <div id="${id}" class="w-full flex justify-start gap-5 text-black">
                 <!-- Roadmap CheckPoint -->
                 <div id="roadmap-point" class="w-12 min-h-full relative flex justify-center items-center overflow-hidden">
-                    <span class="size-8 p-2 bg-blue-600/50 rounded-full flex justify-center items-center"><span class="size-full bg-blue-600 rounded-full"></span></span>
-                    <span id="roadmap-line" class="hidden"></span>
+                    <span class="size-8 p-2 ${question.type == 'er' ? 'bg-red-600/50' : 'bg-green-600/50'} rounded-full flex justify-center items-center"><span class="size-full ${question.type == 'er' ? 'bg-red-600' : 'bg-green-600'} rounded-full"></span></span>
+                    <span id="roadmap-line" class="${checkPoints.last} ${question.type == 'er' ? 'bg-red-600' : 'bg-green-600'}"></span>
                 </div>
-                <!-- Options -->
-                <div class="w-full max-w-xl my-2.5 flex flex-col gap-2.5 glass-tab rounded-3xl border-s-px border-s-blue-600 relative overflow-hidden">
-                    <span class="h-full aspect-square rounded-full absolute top-0 start-0 translate-x-1/2 ltr:-translate-x-1/2" style="background: radial-gradient(circle, rgba(37, 99, 235, 0.25), transparent 60%)"></span>
-                    <h2 class="text-lg font-semibold">${currentStep.obj}</h2>
-                    <div id="options" class="w-full flex flex-wrap justify-center gap-5">
-                        ${nextObjs(prices).map(([k, v]) => { `<button id="start-btn" class="w-full btn-base glass-btn-default rounded-xl" onclick="alert(${k})">${k}</button>` })}
+                <!-- Slections -->
+                <div id="selections" class="w-full max-w-xl my-2.5 flex flex-col gap-2.5 ${question.type == 'er' ? 'glass-chat-emergency' : 'glass-chat-success'} overflow-hidden">
+                    <span id="light" class="h-full aspect-square rounded-full absolute top-0 start-0 translate-x-1/2 ltr:-translate-x-1/2" style="background: radial-gradient(circle, ${question.type == 'er' ? 'rgba(220, 38, 38, 0.25)' : 'rgba(22, 163, 74, 0.25)'}, transparent 60%)"></span>
+                    <div id="options" class="w-full flex flex-col lg:flex-row justify-center gap-5">
+                    <button class="w-full ${question.type == 'er' ? 'glass-btn-emergency' : 'glass-btn-success'} font-medium rounded-xl">${typeof value.value == 'number' ? `${value.value} ج.م` : value.value}</button>
                     </div>
                 </div>
             </div>
         `
-}
+        
 
-
-function nextStep(step) {
-
-    if (typeof step === "object") {
-        element.innerHTML += `
-            <div class="w-full flex justify-start gap-5 text-black">
-                <!-- Roadmap CheckPoint -->
-                <div id="roadmap-point" class="w-12 min-h-full relative flex justify-center items-center overflow-hidden">
-                    <span class="size-8 p-2 bg-blue-600/50 rounded-full flex justify-center items-center"><span class="size-full bg-blue-600 rounded-full"></span></span>
-                    <span id="roadmap-line" class="hidden"></span>
-                </div>
-                <!-- Options -->
-                <div class="w-full max-w-xl my-2.5 flex flex-col gap-2.5 glass-tab rounded-3xl border-s-px border-s-blue-600 relative overflow-hidden">
-                    <span class="h-full aspect-square rounded-full absolute top-0 start-0 translate-x-1/2 ltr:-translate-x-1/2" style="background: radial-gradient(circle, rgba(37, 99, 235, 0.25), transparent 60%)"></span>
-                    <h2 class="text-lg font-semibold">${currentStep.obj}</h2>
-                    <div id="options" class="w-full flex flex-wrap justify-center gap-5">
-                        ${nextObjs(prices).map(([k, v]) => { `<button id="start-btn" class="w-full btn-base glass-btn-default rounded-xl" onclick="alert(${k})">${k}</button>` })}
-                    </div>
-                </div>
-            </div>
-        `
     } else {
-        alert(step)
-
+        newMsg = `
+            <div id="${id}" class="w-full flex justify-start gap-5 text-black">
+                <!-- Roadmap CheckPoint -->
+                <div id="roadmap-point" class="w-12 min-h-full relative flex justify-center items-center overflow-hidden">
+                    <span class="size-8 p-2 bg-blue-600/50 rounded-full flex justify-center items-center"><span class="size-full bg-blue-600 rounded-full"></span></span>
+                    <span id="roadmap-line" class="${checkPoints.last}"></span>
+                </div>
+                <!-- Slections -->
+                <div id="selections" class="w-full max-w-xl my-2.5 flex flex-col gap-2.5 glass-chat-default overflow-hidden">
+                    <span id="light" class="h-full aspect-square rounded-full absolute top-0 start-0 translate-x-1/2 ltr:-translate-x-1/2" style="background: radial-gradient(circle, rgba(37, 99, 235, 0.25), transparent 60%)"></span>
+                    <div id="options" class="w-full flex flex-col lg:flex-row justify-center gap-5">
+                    ${question.values.map(m => `<button id="${m.next || m.title}" class="w-full glass-btn-default rounded-xl" onclick="nextQuestion('${m.next || m.title}','${id}',${Boolean(m.value)})">${m.title}</button>`).join("\n")}
+                    </div>
+                </div>
+            </div>
+        `
     }
-}
 
-// ----------------------------------------------------
+    chat.innerHTML += newMsg
+};
