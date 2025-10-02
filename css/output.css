@@ -1073,6 +1073,18 @@ video {
   width: 100vw;
 }
 
+.min-w-\[\] {
+  min-width: ;
+}
+
+.min-w-\[3\] {
+  min-width: 3;
+}
+
+.min-w-\[36rem\] {
+  min-width: 36rem;
+}
+
 .max-w-xl {
   max-width: 36rem;
 }
@@ -1227,6 +1239,10 @@ video {
 
 .overflow-hidden {
   overflow: hidden;
+}
+
+.whitespace-nowrap {
+  white-space: nowrap;
 }
 
 .whitespace-pre-line {

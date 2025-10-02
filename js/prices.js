@@ -76,8 +76,6 @@ let components = [
         ]
     },
 
-    // -------------------------------------- [AR] -> Adult -> hali -> S
-
     {
         id: "ar-adult-oooo",
         title: "علاج اللثة",
@@ -234,15 +232,59 @@ let components = [
         ]
     },
 
-    // -------------------------------------- [AR] -> Kids -> Pain
+    // ?---------------------------------------------------------------------------- [AR] -> Kids -> Pain
 
     {
         id: "ar-kids-pain",
         title: "صغار (-13)",
         values: [
-            { title: "حشو عصب", next: "ar-kids-rerct" },
+            { title: "ألم مع الأكل", next: "ar-kids-filling" },
+            { title: "ألم مستمر", next: "ar-kids-rct-extractions" },
         ]
-    }
+    },
+
+    {
+        id: "ar-kids-filling",
+        title: "حشو",
+        values: [
+            { title: "حشو ضوئي", value: 600 },
+            { title: "حشو علاجي", value: 800 },
+        ]
+    },
+
+    {
+        id: "ar-kids-rct-extractions",
+        title: "علاج عصب مع خلع",
+        values: [
+            { title: "علاج العصب كامل", value: 1_800 },
+            { title: "علاج العصب جزئي", value: 1_000 },
+            { title: "خلع", value: 400 },
+        ]
+    },
+
+    // ?---------------------------------------------------------------------------- [AR] -> Kids -> Loss
+
+    {
+        id: "ar-kids-loss",
+        title: "فقدار الأسنان",
+        values: [
+            { title: "حافظ مسافة", value: 1_500 },
+            { title: "سن/ضرس متحرك", value: 600 },
+            { title: "طربوش معدن", value: 800 },
+        ]
+    },
+
+    // ?---------------------------------------------------------------------------- [AR] -> Kids -> Swelling
+
+    {
+        id: "ar-kids-swelling",
+        title: "تورم الأسنان",
+        values: [
+            { title: "علاج العصب كامل", value: 1_800 },
+            { title: "علاج العصب جزئي", value: 1_000 },
+            { title: "فتح خراج لثواي", value: 500 },
+        ]
+    },
 ];
 
 // ----------------------------------------------------
@@ -268,7 +310,7 @@ const nextQuestion = (id, lastId, isValue) => {
               <span id="roadmap-line" class="h-full w-0.5 absolute bg-blue-600 top-1/2 translate-x-1/2 start-1/2 hidden"></span>
             </div>
             <!-- Slections -->
-            <div class="w-xl min-w-xl my-2.5 flex flex-col gap-2.5 glass-tab rounded-3xl border-s-px border-s-blue-600 relative overflow-hidden">
+            <div class="min-w-[36rem] my-2.5 flex flex-col gap-2.5 glass-tab rounded-3xl border-s-px border-s-blue-600 relative overflow-hidden">
               <span class="h-full aspect-square rounded-full absolute top-0 start-0 translate-x-1/2 ltr:-translate-x-1/2" style="background: radial-gradient(circle, rgba(37, 99, 235, 0.25), transparent 60%)"></span>
               <!-- <h2 class="text-lg font-semibold">هل انت مستعد؟</h2> -->
               <div id="options" class="w-full flex flex-col lg:flex-row justify-center gap-5">
@@ -300,51 +342,37 @@ const nextQuestion = (id, lastId, isValue) => {
     })
     // --------------------------
 
-    console.log(id, lastId, isValue);
-    let newMsg
-
-    if (isValue) {
-        question = components.find(f => f.id == lastId)
-        console.log(question, lastId);
-        let value = question.values.find(v => v.title == id)
-        console.log(value.value);
-
-        newMsg = `
-            <div id="${id}" class="w-full flex justify-start gap-5 text-black">
-                <!-- Roadmap CheckPoint -->
-                <div id="roadmap-point" class="w-12 min-h-full relative flex justify-center items-center overflow-hidden">
-                    <span class="size-8 p-2 ${question.type == 'er' ? 'bg-red-600/50' : 'bg-green-600/50'} rounded-full flex justify-center items-center"><span class="size-full ${question.type == 'er' ? 'bg-red-600' : 'bg-green-600'} rounded-full"></span></span>
-                    <span id="roadmap-line" class="${checkPoints.last} ${question.type == 'er' ? 'bg-red-600' : 'bg-green-600'}"></span>
-                </div>
-                <!-- Slections -->
-                <div id="selections" class="w-full max-w-xl my-2.5 flex flex-col gap-2.5 ${question.type == 'er' ? 'glass-chat-emergency' : 'glass-chat-success'} overflow-hidden">
-                    <span id="light" class="h-full aspect-square rounded-full absolute top-0 start-0 translate-x-1/2 ltr:-translate-x-1/2" style="background: radial-gradient(circle, ${question.type == 'er' ? 'rgba(220, 38, 38, 0.25)' : 'rgba(22, 163, 74, 0.25)'}, transparent 60%)"></span>
-                    <div id="options" class="w-full flex flex-col lg:flex-row justify-center gap-5">
-                    <button class="w-full ${question.type == 'er' ? 'glass-btn-emergency' : 'glass-btn-success'} font-medium rounded-xl">${typeof value.value == 'number' ? `${value.value} ج.م` : value.value}</button>
-                    </div>
+    //? -------------------------- Setup
+    let nubi = document.getElementById("nubi")
+    question = isValue ? components.find(f => f.id == lastId) : question
+    let value = isValue ? components.find(f => f.id == lastId).values.find(v => v.title == id) : null
+    let bg_color = isValue ? (question.type == 'er' ? 'bg-red-600' : 'bg-green-600') : 'bg-blue-600';
+    let gradient_color = isValue ? (question.type == 'er' ? 'rgba(220, 38, 38, 0.25)' : 'rgba(22, 163, 74, 0.25)') : 'rgba(37, 99, 235, 0.25)';
+    let glass_btn = isValue ? (question.type == 'er' ? 'glass-btn-error' : 'glass-btn-success') : 'glass-btn-default';
+    let glass_chat = isValue ? (question.type == 'er' ? 'glass-chat-emergency' : 'glass-chat-success') : 'glass-chat-default';
+    let _id = (m) => m?.next || m.title
+    let btn_message = (m) => isValue ? (typeof value.value == 'number' ? `${value.value} ج.م` : value.value) : m.title;
+    let onclick = (m) => isValue ? `onclick="nextQuestion('${_id(m)}', '${id}')"` : `onclick="nextQuestion('${_id(m)}','${id}',${Boolean(m.value)})"`;
+    let btns = isValue ? [0] : question.values
+    
+    console.log(question.values);
+    
+    //? -------------------------- Apply
+    nubi.src = isValue ? `../media/Nubi 103.png` : `../media/Nubi 102.png`
+    chat.innerHTML += `
+        <div id="${id}" class="w-full flex justify-start gap-5 text-black">
+            <!-- Roadmap CheckPoint -->
+            <div id="roadmap-point" class="w-12 min-h-full relative flex justify-center items-center overflow-hidden">
+                <span class="size-8 p-2 ${bg_color}/50 rounded-full flex justify-center items-center"><span class="size-full ${bg_color} rounded-full"></span></span>
+                <span id="roadmap-line" class="${checkPoints.last} ${bg_color}"></span>
+            </div>
+            <!-- Slections -->
+            <div id="selections" class="min-w-[36rem] my-2.5 flex flex-col gap-2.5 ${glass_chat} overflow-hidden">
+                <span id="light" class="h-full aspect-square rounded-full absolute top-0 start-0 translate-x-1/2 ltr:-translate-x-1/2" style="background: radial-gradient(circle, ${gradient_color}, transparent 60%)"></span>
+                <div id="options" class="w-full flex flex-col lg:flex-row justify-center gap-5">
+                ${btns.map(m => `<button id="${_id(m)}" class="w-full whitespace-nowrap ${glass_btn} rounded-xl" ${onclick(m)}>${btn_message(m)}</button>`).join("\n")}
                 </div>
             </div>
-        `
-
-
-    } else {
-        newMsg = `
-            <div id="${id}" class="w-full flex justify-start gap-5 text-black">
-                <!-- Roadmap CheckPoint -->
-                <div id="roadmap-point" class="w-12 min-h-full relative flex justify-center items-center overflow-hidden">
-                    <span class="size-8 p-2 bg-blue-600/50 rounded-full flex justify-center items-center"><span class="size-full bg-blue-600 rounded-full"></span></span>
-                    <span id="roadmap-line" class="${checkPoints.last}"></span>
-                </div>
-                <!-- Slections -->
-                <div id="selections" class="w-full max-w-xl my-2.5 flex flex-col gap-2.5 glass-chat-default overflow-hidden">
-                    <span id="light" class="h-full aspect-square rounded-full absolute top-0 start-0 translate-x-1/2 ltr:-translate-x-1/2" style="background: radial-gradient(circle, rgba(37, 99, 235, 0.25), transparent 60%)"></span>
-                    <div id="options" class="w-full flex flex-col lg:flex-row justify-center gap-5">
-                    ${question.values.map(m => `<button id="${m.next || m.title}" class="w-full glass-btn-default rounded-xl" onclick="nextQuestion('${m.next || m.title}','${id}',${Boolean(m.value)})">${m.title}</button>`).join("\n")}
-                    </div>
-                </div>
-            </div>
-        `
-    }
-
-    chat.innerHTML += newMsg
+        </div>
+    `
 };
