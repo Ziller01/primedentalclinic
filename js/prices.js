@@ -19,8 +19,8 @@ let components = [
         values: [
             { title: "ألم", next: "ar-adult-pain" },
             { title: "تورم", next: "ar-adult-swelling" },
-            // { title: "فقدان", next: "ar-adult-loss" },
-            // { title: "تجميل", next: "ar-adult-cosmotic" },
+            { title: "فقدان", next: "ar-adult-loss" },
+            { title: "تجميل", next: "ar-adult-cosmotic" },
             { title: "نزيف", next: "ar-adult-bleeding" },
             { title: "رائحة كريهة", next: "ar-adult-halitosis" },
         ]
@@ -64,10 +64,10 @@ let components = [
         id: "ar-adult-gum",
         title: "علاج خراج لثوي",
         values: [
-            { title: "فتح خراج لثوس وتنظيف لثة", value: 1_300 },
+            { title: "فتح خراج لثواي وتنظيف لثة", value: 1_300 },
         ]
     },
-    
+
     {
         id: "ar-adult-halitosis",
         title: "علاج رائحة الفم الكريهة",
@@ -75,8 +75,8 @@ let components = [
             { title: "تنظيف وازالة الرواسب الجيرية", value: 800 },
         ]
     },
-    
-    // -------------------------------------- [AR] -> Adult -> haliS
+
+    // -------------------------------------- [AR] -> Adult -> hali -> S
 
     {
         id: "ar-adult-oooo",
@@ -84,21 +84,8 @@ let components = [
         values: [
             { title: "فتح خراج لثوس", value: 500 },
             { title: "تنظيف لثة", value: 800 },
-            { title: "تلميع الأسنان", value: 0 },
-            { title: "ازالة لثة", value: 0 },
-        ]
-    },
-    
-    // -------------------------------------- [AR] -> Adult -> Loss
-
-    {
-        id: "ar-adult-",
-        title: "علاج فقدان الأسنان",
-        values: [
-            { title: "زراعة الأسنان", value: "8,500:25,000 ج.م / الزرعة" },
-            { title: "سن/ضرس متحرك", value: "150:700 ج.م / سن-ضرس" },
-            { title: "كبري/جسر", value: "6,000:15,000 ج.م / كبري-جسر" },
-            { title: "", value: 0 },
+            { title: "تلميع الأسنان", value: 400 },
+            { title: "ازالة لثة", value: 300 },
         ]
     },
 
@@ -189,7 +176,7 @@ let components = [
     },
 
     // ?---------------------------------------------------------------------------- [AR] -> Adult -> Bleeding
-    
+
     {
         id: "ar-adult-bleeding",
         title: "نزيف لثوي",
@@ -198,53 +185,75 @@ let components = [
             { title: "نزيف في الأسنان", next: "ar-adult-gum" },
         ]
     },
-    
+
     // ?---------------------------------------------------------------------------- [AR] -> Adult -> Loss
-    
+
     {
         id: "ar-adult-loss",
         title: "فقدان الأسنان",
         values: [
-            { title: "سن/ضرس واحد", next: "ar-adult-" },
-            { title: "من 2 الي 4 أسنان/أضراس", next: "ar-adult-" },
-            { title: "اكثر من 5 أسنان/اضراس", next: "ar-adult-" },
+            { title: "سن/ضرس واحد", next: "ar-adult-loss-s" },
+            { title: "من 2 الي 4 أسنان/أضراس", next: "ar-adult-loss-s" },
+            { title: "اكثر من 5 أسنان/اضراس", next: "ar-adult-loss-s" },
+        ]
+    },
+
+    // -------------------------------------- [AR] -> Adult -> Loss -> S
+
+    {
+        id: "ar-adult-loss-s",
+        title: "علاج فقدان الأسنان",
+        values: [
+            { title: "زراعة الأسنان", value: "8,500-25,000 ج.م / الزرعة" },
+            { title: "سن/ضرس متحرك", value: "150-700 ج.م / سن-ضرس" },
+            { title: "كبري/جسر", value: "6,000-15,000 ج.م / كبري-جسر" },
         ]
     },
 
     // ?---------------------------------------------------------------------------- [AR] -> Adult -> Cosmotic
-    
+
     {
         id: "ar-adult-cosmotic",
         title: "تجميل الأسنان",
         values: [
-            { title: "", next: "ar-adult-" },
-            { title: "", next: "ar-adult-" },
-            { title: "", next: "ar-adult-" },
+            { title: "تبييض الأسنان", value: 4_000 },
+            { title: "القشور الخزفية", value: "3,500 ج.م / القشرة" },
+            { title: "الحشوات التجميلية", value: "1,200 ج.م / سن" },
         ]
     },
-    
+
     // !--------------------------------------------------------------------------- [AR] -> Kids (-13)
 
     {
         id: "ar-kids",
         title: "صغار (-13)",
         values: [
-            { title: "" }
+            { title: "ألم", next: "ar-kids-pain" },
+            { title: "فقدان", next: "ar-kids-loss" },
+            { title: "تورم", next: "ar-kids-swelling" },
         ]
     },
 
+    // -------------------------------------- [AR] -> Kids -> Pain
+
+    {
+        id: "ar-kids-pain",
+        title: "صغار (-13)",
+        values: [
+            { title: "حشو عصب", next: "ar-kids-rerct" },
+        ]
+    }
 ];
 
 // ----------------------------------------------------
 
-let checkPoints = {
+const chat = document.getElementById("chats");
+const checkPoints = {
     none: "hidden",
     start: "h-full w-0.5 absolute bg-blue-600 top-1/2 translate-x-1/2 start-1/2",
     mid: "h-full w-0.5 absolute bg-blue-600 top-0 translate-x-1/2 start-1/2",
     last: "h-full w-0.5 absolute bg-blue-600 -top-1/2 translate-x-1/2 start-1/2",
 }
-
-let chat = document.getElementById("chats");
 
 // ----------------------------------------------------
 
@@ -259,7 +268,7 @@ const nextQuestion = (id, lastId, isValue) => {
               <span id="roadmap-line" class="h-full w-0.5 absolute bg-blue-600 top-1/2 translate-x-1/2 start-1/2 hidden"></span>
             </div>
             <!-- Slections -->
-            <div class="w-full max-w-xl my-2.5 flex flex-col gap-2.5 glass-tab rounded-3xl border-s-px border-s-blue-600 relative overflow-hidden">
+            <div class="w-xl min-w-xl my-2.5 flex flex-col gap-2.5 glass-tab rounded-3xl border-s-px border-s-blue-600 relative overflow-hidden">
               <span class="h-full aspect-square rounded-full absolute top-0 start-0 translate-x-1/2 ltr:-translate-x-1/2" style="background: radial-gradient(circle, rgba(37, 99, 235, 0.25), transparent 60%)"></span>
               <!-- <h2 class="text-lg font-semibold">هل انت مستعد؟</h2> -->
               <div id="options" class="w-full flex flex-col lg:flex-row justify-center gap-5">
@@ -299,7 +308,7 @@ const nextQuestion = (id, lastId, isValue) => {
         console.log(question, lastId);
         let value = question.values.find(v => v.title == id)
         console.log(value.value);
-        
+
         newMsg = `
             <div id="${id}" class="w-full flex justify-start gap-5 text-black">
                 <!-- Roadmap CheckPoint -->
@@ -316,7 +325,7 @@ const nextQuestion = (id, lastId, isValue) => {
                 </div>
             </div>
         `
-        
+
 
     } else {
         newMsg = `

@@ -46,7 +46,7 @@ counters.forEach(counter => {
 // ================================================================================================= Config
 
 const currentPath = window.location.pathname
-const currentLang = currentPath.startsWith("/ar") || ["/", "/index.html"].some(s => currentPath == s) ? "ar" : "en"
+const currentLang = document.documentElement.lang
 
 // ================================================================================================= NAVBAR & FOOTER
 
