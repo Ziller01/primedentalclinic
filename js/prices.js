@@ -294,8 +294,10 @@ const checkPoints = {
     mid: "h-full w-0.5 absolute bg-blue-600 top-0 translate-x-1/2 start-1/2",
     last: "h-full w-0.5 absolute bg-blue-600 -top-1/2 translate-x-1/2 start-1/2",
 }
+let y = 0;
 
 // ----------------------------------------------------
+
 
 const nextQuestion = (id, lastId, isValue) => {
     if (!id) return
@@ -353,9 +355,10 @@ const nextQuestion = (id, lastId, isValue) => {
     let onclick = (m) => isValue ? `onclick="nextQuestion('${_id(m)}', '${id}')"` : `onclick="nextQuestion('${_id(m)}','${id}',${Boolean(m.value)})"`;
     let btns = isValue ? [0] : question.values
 
-    console.log(nubi.style.translate);
+    // y += 5;
+    // nubi.style.translate = `0 ${y}px`;
+    // console.log(nubi.style.translate);
 
-    nubi.style.translate = `translateY(20px)`
 
     //? -------------------------- Apply
     nubi.src = isValue ? `../media/Nubi 103.png` : `../media/Nubi 102.png`

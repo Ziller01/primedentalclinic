@@ -1237,6 +1237,10 @@ video {
   gap: 1.75rem;
 }
 
+.self-center {
+  align-self: center;
+}
+
 .overflow-hidden {
   overflow: hidden;
 }
@@ -1750,6 +1754,10 @@ video {
 
 .duration-300 {
   transition-duration: 300ms;
+}
+
+.duration-200 {
+  transition-duration: 200ms;
 }
 
 /* ------------------------------------------------------------------------- */
