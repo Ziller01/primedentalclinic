@@ -115,8 +115,8 @@ let components = [
         id: "ar-adult-pain-treated",
         title: "سن/ضرس معالج",
         values: [
-            { title: "حشو مؤقت/دائم", next: "ar-adult-pain-treated-filled" },
-            { title: "حشو عصب", next: "ar-adult-rerct" },
+            { title: "معالج حشو مؤقت/دائم", next: "ar-adult-pain-treated-filled" },
+            { title: "معالج حشو عصب", next: "ar-adult-rerct" },
         ]
     },
 
@@ -124,12 +124,10 @@ let components = [
         id: "ar-adult-pain-treated-filled",
         title: "حشو مؤقت/دائم",
         values: [
-            { title: "مستمر", next: "ar-adult-rct" },
-            { title: "مع الاكل/العض", next: "ar-adult-filling" },
+            { title: "الألم مستمر", next: "ar-adult-rct" },
+            { title: "الألم مع الاكل/العض", next: "ar-adult-filling" },
         ]
     },
-
-    // -------------------------------------- [AR] -> Adult -> Pain -> treated
 
     {
         id: "ar-adult-pain-natural",
@@ -354,9 +352,11 @@ const nextQuestion = (id, lastId, isValue) => {
     let btn_message = (m) => isValue ? (typeof value.value == 'number' ? `${value.value} ج.م` : value.value) : m.title;
     let onclick = (m) => isValue ? `onclick="nextQuestion('${_id(m)}', '${id}')"` : `onclick="nextQuestion('${_id(m)}','${id}',${Boolean(m.value)})"`;
     let btns = isValue ? [0] : question.values
-    
-    console.log(question.values);
-    
+
+    console.log(nubi.style.translate);
+
+    nubi.style.translate = `translateY(20px)`
+
     //? -------------------------- Apply
     nubi.src = isValue ? `../media/Nubi 103.png` : `../media/Nubi 102.png`
     chat.innerHTML += `
