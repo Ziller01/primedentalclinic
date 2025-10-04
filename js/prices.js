@@ -58,6 +58,7 @@ let components = [
 
 // ----------------------------------------------------
 
+const nubi = document.getElementById("nubi")
 const chat = document.getElementById("chats");
 const checkPoints = {
     none: "hidden",
@@ -74,6 +75,7 @@ const nextQuestion = (id, lastId, isValue) => {
     if (!id) return
     let lang = document.documentElement.lang
     if (id == "restart") {
+        nubi.src = '../media/Nubi 102.png';
         document.getElementById("chats").innerHTML = `
           <div id="start" class="w-full flex justify-start gap-5 text-black">
             <!-- Roadmap CheckPoint -->
@@ -114,9 +116,8 @@ const nextQuestion = (id, lastId, isValue) => {
     // --------------------------
 
     //? -------------------------- Setup
-    let nubi = document.getElementById("nubi")
     question = isValue ? components.find(f => f.id == lastId) : question
-    nubi.src = isValue ? (question.type == 'er' ? '`../media/Nubi 104.png' : '`../media/Nubi 103.png') : '`../media/Nubi 102.png';
+    nubi.src = isValue ? (question.type == 'er' ? '../media/Nubi 104.png' : '../media/Nubi 103.png') : '../media/Nubi 102.png';
     let value = isValue ? components.find(f => f.id == lastId).values.find(v => v.title == id) : null
     let bg_color = isValue ? (question.type == 'er' ? 'bg-red-600' : 'bg-green-600') : 'bg-blue-600';
     let gradient_color = isValue ? (question.type == 'er' ? 'rgba(220, 38, 38, 0.25)' : 'rgba(22, 163, 74, 0.25)') : 'rgba(37, 99, 235, 0.25)';
