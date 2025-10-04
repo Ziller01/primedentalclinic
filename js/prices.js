@@ -77,14 +77,13 @@ const nextQuestion = (id, lastId, isValue) => {
         document.getElementById("chats").innerHTML = `
           <div id="start" class="w-full flex justify-start gap-5 text-black">
             <!-- Roadmap CheckPoint -->
-            <div id="roadmap-point" class="w-12 min-h-full relative flex justify-center items-center overflow-hidden">
+            <div id="roadmap-point" class="w-12 min-w-fit min-h-full relative flex justify-center items-center overflow-hidden">
               <span class="size-8 p-2 bg-blue-600/50 rounded-full flex justify-center items-center"><span class="size-full bg-blue-600 rounded-full"></span></span>
               <span id="roadmap-line" class="h-full w-0.5 absolute bg-blue-600 top-1/2 translate-x-1/2 start-1/2 hidden"></span>
             </div>
             <!-- Slections -->
-            <div class="w-full my-2.5 flex flex-col gap-2.5 glass-tab rounded-3xl border-s-px border-s-blue-600 relative overflow-hidden">
+            <div class="max-w-full my-2.5 flex flex-col gap-2.5 glass-chat-default overflow-hidden">
               <span class="h-full aspect-square rounded-full absolute top-0 start-0 translate-x-1/2 ltr:-translate-x-1/2" style="background: radial-gradient(circle, rgba(37, 99, 235, 0.25), transparent 60%)"></span>
-              <!-- <h2 class="text-lg font-semibold">هل انت مستعد؟</h2> -->
               <div id="options" class="max-w-full w-[36rem] flex flex-col lg:flex-row justify-center gap-5">
                 <button id="start-btn" class="w-full glass-btn-default rounded-xl" onclick="nextQuestion('${lang == "ar" ? "ar" : "en"}','start')">${lang == "ar" ? "ابدأ" : "start" }</button>
               </div>
@@ -137,7 +136,7 @@ const nextQuestion = (id, lastId, isValue) => {
     chat.innerHTML += `
         <div id="${id}" class="w-full flex justify-start gap-5 text-black">
             <!-- Roadmap CheckPoint -->
-            <div id="roadmap-point" class="w-12 min-h-full relative flex justify-center items-center overflow-hidden">
+            <div id="roadmap-point" class="w-12 min-w-fit min-h-full relative flex justify-center items-center overflow-hidden">
                 <span class="size-8 p-2 ${bg_color}/50 rounded-full flex justify-center items-center"><span class="size-full ${bg_color} rounded-full"></span></span>
                 <span id="roadmap-line" class="${checkPoints.last} ${bg_color}"></span>
             </div>
