@@ -85,7 +85,7 @@ const nextQuestion = (id, lastId, isValue) => {
             <div class="max-w-full my-2.5 flex flex-col gap-2.5 glass-chat-default overflow-hidden">
               <span class="h-full aspect-square rounded-full absolute top-0 start-0 translate-x-1/2 ltr:-translate-x-1/2" style="background: radial-gradient(circle, rgba(37, 99, 235, 0.25), transparent 60%)"></span>
               <div id="options" class="max-w-full w-[36rem] flex flex-col lg:flex-row justify-center gap-5">
-                <button id="start-btn" class="w-full glass-btn-default rounded-xl" onclick="nextQuestion('${lang == "ar" ? "ar" : "en"}','start')">${lang == "ar" ? "ابدأ" : "start" }</button>
+                <button id="start-btn" class="w-full glass-btn-default rounded-xl" onclick="nextQuestion('${lang == "ar" ? "ar" : "en"}','start')">${lang == "ar" ? "ابدأ" : "start"}</button>
               </div>
             </div>
           </div>
@@ -116,6 +116,7 @@ const nextQuestion = (id, lastId, isValue) => {
     //? -------------------------- Setup
     let nubi = document.getElementById("nubi")
     question = isValue ? components.find(f => f.id == lastId) : question
+    nubi.src = isValue ? (question.type == 'er' ? '`../media/Nubi 104.png' : '`../media/Nubi 103.png') : '`../media/Nubi 102.png';
     let value = isValue ? components.find(f => f.id == lastId).values.find(v => v.title == id) : null
     let bg_color = isValue ? (question.type == 'er' ? 'bg-red-600' : 'bg-green-600') : 'bg-blue-600';
     let gradient_color = isValue ? (question.type == 'er' ? 'rgba(220, 38, 38, 0.25)' : 'rgba(22, 163, 74, 0.25)') : 'rgba(37, 99, 235, 0.25)';
@@ -132,7 +133,6 @@ const nextQuestion = (id, lastId, isValue) => {
 
 
     //? -------------------------- Apply
-    nubi.src = isValue ? `../media/Nubi 103.png` : `../media/Nubi 102.png`
     chat.innerHTML += `
         <div id="${id}" class="w-full flex justify-start gap-5 text-black">
             <!-- Roadmap CheckPoint -->
