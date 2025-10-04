@@ -1,5 +1,4 @@
 let components = [
-
     //! >>===========================================>> Arabic
     { id: "ar", title: "ابدأ", values: [{ title: "كبار (13+)", next: "ar-adult" }, { title: "صغار (13-)", next: "ar-kids" },] },
     { id: "ar-adult", title: "كبار (+13)", values: [{ title: "ألم", next: "ar-adult-pain" }, { title: "تورم", next: "ar-adult-swelling" }, { title: "فقدان", next: "ar-adult-loss" }, { title: "تجميل", next: "ar-adult-cosmotic" }, { title: "نزيف", next: "ar-adult-bleeding" }, { title: "رائحة كريهة", next: "ar-adult-halitosis" },] },
@@ -73,6 +72,7 @@ let y = 0;
 
 const nextQuestion = (id, lastId, isValue) => {
     if (!id) return
+    let lang = document.documentElement.lang
     if (id == "restart") {
         document.getElementById("chats").innerHTML = `
           <div id="start" class="w-full flex justify-start gap-5 text-black">
@@ -82,11 +82,11 @@ const nextQuestion = (id, lastId, isValue) => {
               <span id="roadmap-line" class="h-full w-0.5 absolute bg-blue-600 top-1/2 translate-x-1/2 start-1/2 hidden"></span>
             </div>
             <!-- Slections -->
-            <div class="min-w-[36rem] my-2.5 flex flex-col gap-2.5 glass-tab rounded-3xl border-s-px border-s-blue-600 relative overflow-hidden">
+            <div class="w-full my-2.5 flex flex-col gap-2.5 glass-tab rounded-3xl border-s-px border-s-blue-600 relative overflow-hidden">
               <span class="h-full aspect-square rounded-full absolute top-0 start-0 translate-x-1/2 ltr:-translate-x-1/2" style="background: radial-gradient(circle, rgba(37, 99, 235, 0.25), transparent 60%)"></span>
               <!-- <h2 class="text-lg font-semibold">هل انت مستعد؟</h2> -->
-              <div id="options" class="w-full flex flex-col lg:flex-row justify-center gap-5">
-                <button id="start-btn" class="w-full glass-btn-default rounded-xl" onclick="nextQuestion('ar','start')">ابدأ</button>
+              <div id="options" class="max-w-full w-[36rem] flex flex-col lg:flex-row justify-center gap-5">
+                <button id="start-btn" class="w-full glass-btn-default rounded-xl" onclick="nextQuestion('${lang == "ar" ? "ar" : "en"}','start')">${lang == "ar" ? "ابدأ" : "start" }</button>
               </div>
             </div>
           </div>
@@ -105,7 +105,7 @@ const nextQuestion = (id, lastId, isValue) => {
     let lastBtns = document.querySelectorAll(`#${lastId} button`)
     lastBtns.forEach(btn => {
         if (lastId == "start") {
-            btn.textContent = "أعد المحاولة"
+            btn.textContent = lang == "ar" ? "أعد المحاولة" : "restart"
             btn.attributes.getNamedItem("onclick").value = "nextQuestion('restart','start')"
         } else {
             btn.classList.replace("glass-btn-default", btn.id == id ? "glass-btn-selected" : "glass-btn-disabled")
@@ -142,9 +142,9 @@ const nextQuestion = (id, lastId, isValue) => {
                 <span id="roadmap-line" class="${checkPoints.last} ${bg_color}"></span>
             </div>
             <!-- Slections -->
-            <div id="selections" class="min-w-[36rem] my-2.5 flex flex-col gap-2.5 ${glass_chat} overflow-hidden">
+            <div id="selections" class="max-w-full my-2.5 flex flex-col gap-2.5 ${glass_chat} overflow-hidden">
                 <span id="light" class="h-full aspect-square rounded-full absolute top-0 start-0 translate-x-1/2 ltr:-translate-x-1/2" style="background: radial-gradient(circle, ${gradient_color}, transparent 60%)"></span>
-                <div id="options" class="w-full flex flex-col lg:flex-row justify-center gap-5">
+                <div id="options" class="max-w-full w-[36rem] flex flex-col lg:flex-row justify-center gap-5">
                 ${btns.map(m => `<button id="${_id(m)}" class="w-full whitespace-nowrap ${glass_btn} rounded-xl" ${onclick(m)}>${btn_message(m)}</button>`).join("\n")}
                 </div>
             </div>
