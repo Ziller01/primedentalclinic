@@ -340,3 +340,5 @@ document.querySelectorAll('.faq-question').forEach(button => {
     answer.classList.toggle('hidden');
   });
 });
+
+// Developed by AhmedTalaat.com

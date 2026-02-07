@@ -151,3 +151,4 @@ const nextQuestion = (id, lastId, isValue) => {
         </div>
     `
 };
+// Developed by AhmedTalaat.com
